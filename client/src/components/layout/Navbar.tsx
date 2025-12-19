@@ -1,0 +1,114 @@
+import { Link, useLocation } from "wouter";
+import { ASSETS, CONTENT } from "@/lib/content";
+import { cn } from "@/lib/utils";
+import { Menu, X } from "lucide-react";
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+
+export function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [location] = useLocation();
+
+  const navLinks = [
+    { name: "Home", href: "/" },
+    { name: "About", href: "/#about" },
+    { name: "Services", href: "/#services" },
+    { name: "Team", href: "/#team" },
+    { name: "Contact", href: "/#contact" },
+  ];
+
+  const toggleMenu = () => setIsOpen(!isOpen);
+
+  const scrollToSection = (id: string) => {
+    setIsOpen(false);
+    if (id.startsWith("/#")) {
+      const element = document.querySelector(id.substring(1));
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
+
+  return (
+    <nav className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-sm border-b border-secondary/20 shadow-sm">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="flex items-center justify-between h-20">
+          {/* Logo */}
+          <Link href="/" className="flex items-center gap-3 group">
+            <img 
+              src={ASSETS.logo} 
+              alt={CONTENT.companyName} 
+              className="h-16 w-auto object-contain transition-transform group-hover:scale-105" 
+            />
+            <div className="hidden md:flex flex-col">
+              <span className="font-serif font-bold text-xl tracking-wide text-primary leading-none">MiRV MARiNE</span>
+              <span className="text-xs text-secondary font-medium tracking-widest">CELESTIAL SOLUTIONS</span>
+            </div>
+          </Link>
+
+          {/* Desktop Nav */}
+          <div className="hidden md:flex items-center gap-8">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className={cn(
+                  "text-sm font-medium uppercase tracking-wider hover:text-secondary transition-colors relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-secondary after:transition-all hover:after:w-full",
+                  location === link.href ? "text-primary" : "text-foreground"
+                )}
+                onClick={(e) => {
+                  if (link.href.startsWith("/#")) {
+                    e.preventDefault();
+                    scrollToSection(link.href);
+                  }
+                }}
+              >
+                {link.name}
+              </a>
+            ))}
+            <Button className="bg-primary hover:bg-primary/90 text-white font-medium rounded-none px-6 shadow-md border-b-4 border-primary/50 hover:border-primary active:border-0 active:translate-y-1 transition-all">
+              Get in Touch
+            </Button>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button 
+            className="md:hidden text-primary p-2"
+            onClick={toggleMenu}
+            aria-label="Toggle menu"
+          >
+            {isOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Menu Overlay */}
+      {isOpen && (
+        <div className="md:hidden absolute top-20 left-0 w-full bg-white border-b border-border shadow-xl animate-in slide-in-from-top-5">
+          <div className="flex flex-col p-6 space-y-4">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className="text-lg font-serif font-medium text-foreground hover:text-primary border-b border-dashed border-muted pb-2"
+                onClick={(e) => {
+                  if (link.href.startsWith("/#")) {
+                    e.preventDefault();
+                    scrollToSection(link.href);
+                  } else {
+                    setIsOpen(false);
+                  }
+                }}
+              >
+                {link.name}
+              </a>
+            ))}
+            <Button className="w-full bg-primary text-white mt-4">
+              Get in Touch
+            </Button>
+          </div>
+        </div>
+      )}
+    </nav>
+  );
+}
