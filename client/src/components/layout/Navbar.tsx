@@ -42,7 +42,7 @@ export function Navbar() {
             />
             <div className="hidden md:flex flex-col">
               <span className="font-serif font-bold text-xl tracking-wide text-primary leading-none">MiRV MARiNE</span>
-              <span className="text-xs text-secondary font-medium tracking-widest">CELESTIAL SOLUTIONS</span>
+              <span className="text-[10px] text-secondary font-medium tracking-widest leading-tight">PROVIDING CELESTIAL SOLUTIONS</span>
             </div>
           </Link>
 
