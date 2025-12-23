@@ -30,8 +30,8 @@ export function HeroCarousel() {
         <div className="container px-4">
           <div className="max-w-3xl mx-auto space-y-6 animate-in fade-in zoom-in duration-1000">
             <h1 className="text-xl md:text-2xl lg:text-3xl font-serif font-bold text-white leading-tight drop-shadow-lg">
-              MiRV MARiNE LLP <span className="text-secondary mx-2">→</span> India<br/>
-              MiRV MARiNE Services LLC <span className="text-secondary mx-2">→</span> UAE
+              MiRV MARiNE LLP <span className="text-white">[India]</span><br/>
+              MiRV MARiNE Services LLC <span className="text-white">[UAE]</span>
             </h1>
             <h2 className="text-lg md:text-xl font-bold tracking-wide text-secondary drop-shadow-lg">
               Catering to Main Fleet and Oil & Gas Industry
