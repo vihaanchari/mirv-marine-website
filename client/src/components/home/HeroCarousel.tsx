@@ -29,17 +29,13 @@ export function HeroCarousel() {
       <div className="absolute inset-0 flex items-center justify-center text-center">
         <div className="container px-4">
           <div className="max-w-3xl mx-auto space-y-6 animate-in fade-in zoom-in duration-1000">
-            <div className="space-y-2 mb-4">
-              <h2 className="text-lg md:text-xl font-bold tracking-wide text-secondary drop-shadow-lg">
-                MiRV MARiNE LLP <span className="text-white mx-2">→</span> India
-              </h2>
-              <h2 className="text-lg md:text-xl font-bold tracking-wide text-secondary drop-shadow-lg">
-                MiRV MARiNE Services LLC <span className="text-white mx-2">→</span> UAE
-              </h2>
-            </div>
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-white leading-tight drop-shadow-lg">
-              Catering to Main Fleet and Oil & Gas Industry
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-white leading-tight drop-shadow-lg">
+              MiRV MARiNE LLP <span className="text-secondary mx-2">→</span> India<br/>
+              MiRV MARiNE Services LLC <span className="text-secondary mx-2">→</span> UAE
             </h1>
+            <h2 className="text-lg md:text-xl font-bold tracking-wide text-secondary drop-shadow-lg">
+              Catering to Main Fleet and Oil & Gas Industry
+            </h2>
             <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed drop-shadow-md">
               Excellence in Maritime Training, Surveys, and Consultancy Services worldwide.
             </p>
