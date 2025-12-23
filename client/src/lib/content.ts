@@ -13,16 +13,18 @@ import {
 // Asset Paths
 export const ASSETS = {
   logo: "/images/logo-removebg-preview_1766125964455.png",
+  aboutImage: "/attached_assets/Screenshot_2025-12-23_162320_1766487267912.png",
   slideshow: [
     "/images/ss1.png", // Ship
     "/images/ss2.png", // Deck
     "/images/ss3.jpeg", // Sea
     "/images/ss4.jpeg", // Training
-    "/images/ss5.jpeg", // Office
+
     "/images/ss6.jpeg",
     "/images/ss7.jpeg",
     "/images/ss8.jpeg",
     "/images/ss9.jpeg",
+    "/images/ss10.jpeg",
   ],
 };
 

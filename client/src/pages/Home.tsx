@@ -53,9 +53,9 @@ export default function Home() {
               <div className="relative order-1 lg:order-2 group">
                 <div className="absolute -inset-4 border-2 border-secondary/30 rounded-lg translate-x-4 translate-y-4 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-500"></div>
                 <img 
-                  src={ASSETS.slideshow[3]} 
-                  alt="Marine Training" 
-                  className="rounded-lg shadow-2xl relative z-10 w-full object-cover aspect-[4/3] grayscale-[20%] group-hover:grayscale-0 transition-all duration-700"
+                  src={ASSETS.aboutImage} 
+                  alt="MiRV MARiNE Branding" 
+                  className="rounded-lg shadow-2xl relative z-10 w-full object-cover aspect-[4/3] group-hover:shadow-2xl transition-all duration-700"
                 />
                 <div className="absolute -bottom-10 -left-10 bg-white p-6 shadow-xl rounded-lg z-20 max-w-xs border-t-4 border-primary hidden md:block">
                   <p className="font-serif italic text-primary text-lg">"Excellence in every nautical mile."</p>
