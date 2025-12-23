@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { HeroCarousel } from "@/components/home/HeroCarousel";
+import { ServiceCarousel } from "@/components/home/ServiceCarousel";
 import { CONTENT, ASSETS } from "@/lib/content";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -102,6 +103,12 @@ export default function Home() {
                   </CardContent>
                 </Card>
               ))}
+            </div>
+
+            {/* Services Gallery Carousel */}
+            <div className="mt-16 pt-12 border-t border-border">
+              <h4 className="text-2xl font-serif font-bold text-center text-primary mb-8">Our Work in Action</h4>
+              <ServiceCarousel />
             </div>
           </div>
         </section>

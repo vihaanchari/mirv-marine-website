@@ -14,11 +14,15 @@ import {
 export const ASSETS = {
   logo: "/images/logo-removebg-preview_1766125964455.png",
   slideshow: [
-    "/images/Screenshot_2025-12-18_140054_1766130651823.png", // Ship
-    "/images/Screenshot_2025-12-18_140134_1766130651824.png", // Deck
-    "/images/WhatsApp_Image_2025-12-19_at_13.17.06_(2)_1766130651826.jpeg", // Sea
-    "/images/WhatsApp_Image_2025-12-19_at_13.17.04_1766130651825.jpeg", // Training
-    "/images/WhatsApp_Image_2025-12-19_at_13.17.02_(1)_1766130651824.jpeg", // Office
+    "/images/ss1.png", // Ship
+    "/images/ss2.png", // Deck
+    "/images/ss3.jpeg", // Sea
+    "/images/ss4.jpeg", // Training
+    "/images/ss5.jpeg", // Office
+    "/images/ss6.jpeg",
+    "/images/ss7.jpeg",
+    "/images/ss8.jpeg",
+    "/images/ss9.jpeg",
   ],
 };
 
