@@ -29,7 +29,7 @@ export function HeroCarousel() {
       <div className="absolute inset-0 flex items-center justify-center text-center">
         <div className="container px-4">
           <div className="max-w-3xl mx-auto space-y-6 animate-in fade-in zoom-in duration-1000">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-white leading-tight drop-shadow-lg">
+            <h1 className="text-xl md:text-2xl lg:text-3xl font-serif font-bold text-white leading-tight drop-shadow-lg">
               MiRV MARiNE LLP <span className="text-secondary mx-2">→</span> India<br/>
               MiRV MARiNE Services LLC <span className="text-secondary mx-2">→</span> UAE
             </h1>
