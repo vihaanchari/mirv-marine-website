@@ -66,7 +66,10 @@ export function Navbar() {
                 {link.name}
               </a>
             ))}
-            <Button className="bg-primary hover:bg-primary/90 text-white font-medium rounded-none px-6 shadow-md border-b-4 border-primary/50 hover:border-primary active:border-0 active:translate-y-1 transition-all">
+            <Button 
+              className="bg-primary hover:bg-primary/90 text-white font-medium rounded-none px-6 shadow-md border-b-4 border-primary/50 hover:border-primary active:border-0 active:translate-y-1 transition-all"
+              onClick={() => document.getElementById('cta')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Get in Touch
             </Button>
           </div>

@@ -40,10 +40,19 @@ export function HeroCarousel() {
               Excellence in Maritime Training, Surveys, and Consultancy Services worldwide.
             </p>
             <div className="pt-4 flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-secondary text-primary hover:bg-white hover:text-primary font-bold px-8 py-6 text-lg rounded-sm shadow-xl transition-all">
+              <Button 
+                size="lg" 
+                className="bg-secondary text-primary hover:bg-white hover:text-primary font-bold px-8 py-6 text-lg rounded-sm shadow-xl transition-all"
+                onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
+              >
                 Explore Services
               </Button>
-              <Button size="lg" variant="outline" className="text-white border-white/40 hover:bg-white/10 hover:border-white px-8 py-6 text-lg rounded-sm backdrop-blur-sm">
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="text-white border-white/40 hover:bg-white/10 hover:border-white px-8 py-6 text-lg rounded-sm backdrop-blur-sm"
+                onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
+              >
                 About Us <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
             </div>
