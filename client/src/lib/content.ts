@@ -13,7 +13,7 @@ import {
 // Asset Paths
 export const ASSETS = {
   logo: "/images/logo-removebg-preview_1766125964455.png",
-  aboutImage: "/images/resize5.jpg",
+  aboutImage: "/images/resize51.jpg",
   slideshow: [
     "/images/ss1.png", // Ship
     "/images/ss2.png", // Deck
@@ -115,12 +115,12 @@ export const CONTENT = {
     {
       name: "Mr. Krishan Nair",
       role: "SME – Technical",
-      bio: "DMET alumni with 11 years deep-sea experience. Offshore industry expert since 2003. Joined Maersk Training in 2023 for vessel audits and crew training.",
+      bio: "DMET alumni with 11 years deep-sea experience. Offshore industry expert since 2003. Was in Maersk Training from 2023 to 2024 for vessel audits and crew training.",
     },
     {
       name: "Mr. Saswata Das",
       role: "Head of Operations",
-      bio: "Lead auditor, certified VDR analyst, Auditor/Inspector & Maritime trainer. Started career with Wallem Shipmanagement. Commanded vessels since 2007. DPO since 2012. External MMD surveyor prior to forming MiRV Marine LLP.",
+      bio: "Has previous experience of 13 years as Fleet Personnel Manager with d’Amico Ship India Pvt Ltd. Kolkata, specializing in crew management, planning and statutory compliance across fleet operations. Integral part of MiRV MARiNE since its inception.",
     },
   ],
   contact: {
