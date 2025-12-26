@@ -118,17 +118,29 @@ export default function Home() {
                       {service.description}
                     </p>
 
-                    <div className="pt-4 space-y-2">
-                      {service.details.map((detail, idx) => (
-                        <div
-                          key={idx}
-                          className="flex items-start gap-2 text-xs font-medium text-slate-600"
-                        >
-                          <CheckCircle2 className="w-3.5 h-3.5 text-secondary mt-0.5 shrink-0" />
-                          <span>{detail}</span>
-                        </div>
-                      ))}
-                    </div>
+                          <div className="pt-4 space-y-2">
+                            {service.details.map((detail, idx) => (
+                              <div
+                                key={idx}
+                                className="flex items-start gap-2 text-xs font-medium text-slate-600"
+                              >
+                                <CheckCircle2 className="w-3.5 h-3.5 text-secondary mt-0.5 shrink-0" />
+                                <span>
+                                  {detail}
+                                  {detail.includes("Shipfinite Job Portal Link-") && (
+                                    <a
+                                      href="https://jobs.shipfinite.com/"
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="ml-1 text-secondary hover:underline font-bold inline-flex items-center gap-1"
+                                    >
+                                      Click Here
+                                    </a>
+                                  )}
+                                </span>
+                              </div>
+                            ))}
+                          </div>
                   </CardContent>
                 </Card>
               ))}
