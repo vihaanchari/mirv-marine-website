@@ -86,10 +86,8 @@ export function Navbar() {
                   location === link.href ? "text-primary" : "text-foreground"
                 )}
                 onClick={(e) => {
-                  if (link.href.startsWith("/#")) {
-                    e.preventDefault();
-                    scrollToSection(link.href);
-                  }
+                  e.preventDefault();
+                  smoothScrollTo(link.href);
                 }}
               >
                 {link.name}
