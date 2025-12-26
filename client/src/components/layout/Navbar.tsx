@@ -68,7 +68,20 @@ export function Navbar() {
             ))}
             <Button 
               className="bg-primary hover:bg-primary/90 text-white font-medium rounded-none px-6 shadow-md border-b-4 border-primary/50 hover:border-primary active:border-0 active:translate-y-1 transition-all"
-              onClick={() => document.getElementById('cta')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => {
+                const element = document.getElementById('cta');
+                if (element) {
+                  const offset = 80;
+                  const bodyRect = document.body.getBoundingClientRect().top;
+                  const elementRect = element.getBoundingClientRect().top;
+                  const elementPosition = elementRect - bodyRect;
+                  const offsetPosition = elementPosition - offset;
+                  window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                  });
+                }
+              }}
             >
               Get in Touch
             </Button>

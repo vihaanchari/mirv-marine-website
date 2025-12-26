@@ -43,7 +43,20 @@ export function HeroCarousel() {
               <Button 
                 size="lg" 
                 className="bg-secondary text-primary hover:bg-white hover:text-primary font-bold px-8 py-6 text-lg rounded-sm shadow-xl transition-all"
-                onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => {
+                  const element = document.getElementById('services');
+                  if (element) {
+                    const offset = 80;
+                    const bodyRect = document.body.getBoundingClientRect().top;
+                    const elementRect = element.getBoundingClientRect().top;
+                    const elementPosition = elementRect - bodyRect;
+                    const offsetPosition = elementPosition - offset;
+                    window.scrollTo({
+                      top: offsetPosition,
+                      behavior: 'smooth'
+                    });
+                  }
+                }}
               >
                 Explore Services
               </Button>
@@ -51,7 +64,20 @@ export function HeroCarousel() {
                 size="lg" 
                 variant="outline" 
                 className="text-white border-white/40 hover:bg-white/10 hover:border-white px-8 py-6 text-lg rounded-sm backdrop-blur-sm"
-                onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => {
+                  const element = document.getElementById('about');
+                  if (element) {
+                    const offset = 80;
+                    const bodyRect = document.body.getBoundingClientRect().top;
+                    const elementRect = element.getBoundingClientRect().top;
+                    const elementPosition = elementRect - bodyRect;
+                    const offsetPosition = elementPosition - offset;
+                    window.scrollTo({
+                      top: offsetPosition,
+                      behavior: 'smooth'
+                    });
+                  }
+                }}
               >
                 About Us <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
