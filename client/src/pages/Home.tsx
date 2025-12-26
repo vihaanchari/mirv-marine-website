@@ -167,10 +167,24 @@ export default function Home() {
                       const elementRect = element.getBoundingClientRect().top;
                       const elementPosition = elementRect - bodyRect;
                       const offsetPosition = elementPosition - offset;
-                      window.scrollTo({
-                        top: offsetPosition,
-                        behavior: 'smooth'
-                      });
+                      
+                      const startPosition = window.pageYOffset;
+                      const distance = offsetPosition - startPosition;
+                      const duration = 1500;
+                      let start: number | null = null;
+
+                      const step = (timestamp: number) => {
+                        if (!start) start = timestamp;
+                        const progress = timestamp - start;
+                        const percentage = Math.min(progress / duration, 1);
+                        const ease = percentage < 0.5 
+                          ? 4 * percentage * percentage * percentage 
+                          : 1 - Math.pow(-2 * percentage + 2, 3) / 2;
+                        
+                        window.scrollTo(0, startPosition + distance * ease);
+                        if (progress < duration) window.requestAnimationFrame(step);
+                      };
+                      window.requestAnimationFrame(step);
                     }
                   }}
                 >
