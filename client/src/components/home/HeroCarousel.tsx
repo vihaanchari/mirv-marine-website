@@ -8,7 +8,7 @@ export function HeroCarousel() {
   const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 5000 })]);
 
   return (
-    <div className="relative w-full h-[600px] overflow-hidden bg-slate-900">
+    <div id="hero" className="relative w-full h-[600px] overflow-hidden bg-slate-900">
       {/* Carousel */}
       <div className="w-full h-full" ref={emblaRef}>
         <div className="flex w-full h-full">

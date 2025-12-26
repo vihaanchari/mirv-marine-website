@@ -10,7 +10,7 @@ export function Navbar() {
   const [location] = useLocation();
 
   const navLinks = [
-    { name: "Home", href: "/" },
+    { name: "Home", href: "#hero" },
     { name: "About", href: "/#about" },
     { name: "Services", href: "/#services" },
     { name: "Team", href: "/#team" },
@@ -59,7 +59,11 @@ export function Navbar() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
+          <a 
+            href="/" 
+            className="flex items-center gap-3 group"
+            onClick={() => window.location.href = '/'}
+          >
             <img 
               src={ASSETS.logo} 
               alt={CONTENT.companyName} 
@@ -69,7 +73,7 @@ export function Navbar() {
               <span className="font-serif font-bold text-xl tracking-wide text-primary leading-none">MiRV MARiNE</span>
               <span className="text-[10px] text-secondary font-medium tracking-widest leading-tight">PROVIDING CELESTIAL SOLUTIONS</span>
             </div>
-          </Link>
+          </a>
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
