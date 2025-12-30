@@ -15,16 +15,23 @@ export const ASSETS = {
   logo: "/images/logo-removebg-preview_1766125964455.png",
   aboutImage: "/images/resize51.jpg",
   slideshow: [
-    "/images/ss1.png", // Ship
-    "/images/ss2.png", // Deck
-    "/images/ss3.jpeg", // Sea
-    "/images/ss4.jpeg", // Training
-
-    "/images/ss6.jpeg",
-    "/images/ss7.jpeg",
-    "/images/ss8.jpeg",
-    "/images/ss9.jpeg",
-    "/images/ss10.jpeg",
+    "/attached_assets/a1_1767092884153.png",
+    "/attached_assets/a2_1767092884156.jpeg",
+    "/attached_assets/a3_1767092884157.jpeg",
+    "/attached_assets/a4_1767092884157.jpeg",
+    "/attached_assets/a5_1767092884158.jpeg",
+    "/attached_assets/a6_1767092884159.jpeg",
+    "/attached_assets/a7_1767092884160.jpeg",
+    "/attached_assets/a8_1767092884161.jpeg",
+    "/attached_assets/a9_1767092884161.jpeg",
+    "/attached_assets/a10_1767092884162.jpeg",
+    "/attached_assets/a11_1767092884162.jpeg",
+    "/attached_assets/a12_1767092884162.jpeg",
+    "/attached_assets/a13_1767092884163.jpeg",
+    "/attached_assets/a14_1767092884163.jpeg",
+    "/attached_assets/a15_1767092884163.jpeg",
+    "/attached_assets/a16_1767092884164.jpeg",
+    "/attached_assets/a17_1767092884164.jpeg"
   ],
 };
 
@@ -36,7 +43,7 @@ export const CONTENT = {
     title: "About The Company",
     story: [
       "MiRV MARiNE was started as a proprietorship company by Capt. Indraneel Chari in 2019.",
-      "A marine consultancy firm which grew exponentially in the field of Maritime training, Inspections/surveys, software development, coaching/mentoring, cyber security, crewing & store supplies and export services over a short period of time.",
+      "A marine consultancy firm which grew exponentially in the field of Maritime training, Inspections/surveys, software development, coaching/mentoring, cyber security, crewing, store supplies and export services over a short period of time.",
       "The company was rechristened as MiRV MARiNE LLP and registered as a partnership firm in April 2024 and got its ISO certification from ABS Class soon after. The company also has its presence in UAE as MiRV MARiNE Services LLC.",
       "MiRV MARiNE Academy was started parallelly and operates as the virtual classroom under the same ISO certification which imparts training to seafarers and shore personnel worldwide including on cloud-based simulator modules.",
       "MiRV MARiNE Services LLC was registered in the UAE in May 2025 to tap on the growing oil & gas market in the Persian Gulf region.",
