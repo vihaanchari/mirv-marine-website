@@ -15,6 +15,17 @@ export const ASSETS = {
   logo: "/images/logo-removebg-preview_1766125964455.png",
   aboutImage: "/images/resize51.jpg",
   slideshow: [
+    "/images/ss1.png", // Ship
+    "/images/ss2.png", // Deck
+    "/images/ss3.jpeg", // Sea
+    "/images/ss4.jpeg", // Training
+    "/images/ss6.jpeg",
+    "/images/ss7.jpeg",
+    "/images/ss8.jpeg",
+    "/images/ss9.jpeg",
+    "/images/ss10.jpeg",
+  ],
+  gallery: [
     "/attached_assets/a1_1767092884153.png",
     "/attached_assets/a2_1767092884156.jpeg",
     "/attached_assets/a3_1767092884157.jpeg",

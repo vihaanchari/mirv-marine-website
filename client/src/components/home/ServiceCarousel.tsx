@@ -37,7 +37,7 @@ export function ServiceCarousel() {
     <div className="relative w-full group px-4">
       <div className="overflow-hidden rounded-lg shadow-2xl" ref={emblaRef}>
         <div className="flex w-full h-full">
-          {ASSETS.slideshow.map((src, index) => (
+          {ASSETS.gallery.map((src, index) => (
             <div className="flex-[0_0_100%] min-w-0 relative h-[400px] md:h-[600px]" key={index}>
               <img
                 src={src}
