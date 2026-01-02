@@ -251,6 +251,22 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* Partners Section */}
+        <section id="partners" className="py-20 bg-white">
+          <div className="container mx-auto px-4 md:px-6 text-center">
+            <h3 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-12">
+              WE ARE PROUD TO BE ASSOCIATED WITH !!
+            </h3>
+            <div className="max-w-5xl mx-auto">
+              <img 
+                src="/attached_assets/image_1767338113162.png" 
+                alt="Associated Companies" 
+                className="w-full h-auto object-contain mx-auto"
+              />
+            </div>
+          </div>
+        </section>
       </main>
 
       <Footer />
