@@ -118,29 +118,29 @@ export default function Home() {
                       {service.description}
                     </p>
 
-                          <div className="pt-4 space-y-2">
-                            {service.details.map((detail, idx) => (
-                              <div
-                                key={idx}
-                                className="flex items-start gap-2 text-xs font-medium text-slate-600"
+                    <div className="pt-4 space-y-2">
+                      {service.details.map((detail, idx) => (
+                        <div
+                          key={idx}
+                          className="flex items-start gap-2 text-xs font-medium text-slate-600"
+                        >
+                          <CheckCircle2 className="w-3.5 h-3.5 text-secondary mt-0.5 shrink-0" />
+                          <span>
+                            {detail}
+                            {detail.includes("Shipfinite Job Portal Link-") && (
+                              <a
+                                href="https://jobs.shipfinite.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="ml-1 text-secondary hover:underline font-bold inline-flex items-center gap-1"
                               >
-                                <CheckCircle2 className="w-3.5 h-3.5 text-secondary mt-0.5 shrink-0" />
-                                <span>
-                                  {detail}
-                                  {detail.includes("Shipfinite Job Portal Link-") && (
-                                    <a
-                                      href="https://jobs.shipfinite.com/"
-                                      target="_blank"
-                                      rel="noopener noreferrer"
-                                      className="ml-1 text-secondary hover:underline font-bold inline-flex items-center gap-1"
-                                    >
-                                      Click Here
-                                    </a>
-                                  )}
-                                </span>
-                              </div>
-                            ))}
-                          </div>
+                                Click Here
+                              </a>
+                            )}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
                   </CardContent>
                 </Card>
               ))}
@@ -172,14 +172,15 @@ export default function Home() {
                   size="lg"
                   className="bg-primary hover:bg-primary/90 text-white font-bold px-10 py-6 text-lg shadow-lg"
                   onClick={() => {
-                    const element = document.getElementById('contact');
+                    const element = document.getElementById("contact");
                     if (element) {
                       const offset = 80;
-                      const bodyRect = document.body.getBoundingClientRect().top;
+                      const bodyRect =
+                        document.body.getBoundingClientRect().top;
                       const elementRect = element.getBoundingClientRect().top;
                       const elementPosition = elementRect - bodyRect;
                       const offsetPosition = elementPosition - offset;
-                      
+
                       const startPosition = window.pageYOffset;
                       const distance = offsetPosition - startPosition;
                       const duration = 1500;
@@ -189,12 +190,14 @@ export default function Home() {
                         if (!start) start = timestamp;
                         const progress = timestamp - start;
                         const percentage = Math.min(progress / duration, 1);
-                        const ease = percentage < 0.5 
-                          ? 4 * percentage * percentage * percentage 
-                          : 1 - Math.pow(-2 * percentage + 2, 3) / 2;
-                        
+                        const ease =
+                          percentage < 0.5
+                            ? 4 * percentage * percentage * percentage
+                            : 1 - Math.pow(-2 * percentage + 2, 3) / 2;
+
                         window.scrollTo(0, startPosition + distance * ease);
-                        if (progress < duration) window.requestAnimationFrame(step);
+                        if (progress < duration)
+                          window.requestAnimationFrame(step);
                       };
                       window.requestAnimationFrame(step);
                     }
@@ -228,7 +231,9 @@ export default function Home() {
                   key={index}
                   className={cn(
                     "bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-lg hover:bg-white/10 transition-colors",
-                    index === 4 && CONTENT.team.length === 5 && "md:col-span-2 md:mx-auto md:max-w-xl"
+                    index === 4 &&
+                      CONTENT.team.length === 5 &&
+                      "md:col-span-2 md:mx-auto md:max-w-xl",
                   )}
                 >
                   <div className="flex flex-col md:flex-row gap-6 items-start">
@@ -259,9 +264,9 @@ export default function Home() {
               WE ARE PROUD TO BE ASSOCIATED WITH !!
             </h3>
             <div className="max-w-5xl mx-auto">
-              <img 
-                src="/attached_assets/image_1767338113162.png" 
-                alt="Associated Companies" 
+              <img
+                src="/images/companies.png"
+                alt="Associated Companies"
                 className="w-full h-auto object-contain mx-auto"
               />
             </div>
