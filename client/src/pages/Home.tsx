@@ -5,7 +5,7 @@ import { ServiceCarousel } from "@/components/home/ServiceCarousel";
 import { CONTENT, ASSETS } from "@/lib/content";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { CheckCircle2, Award, Anchor } from "lucide-react";
+import { CheckCircle2, Award, Anchor, Users } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export default function Home() {
@@ -152,6 +152,67 @@ export default function Home() {
                 Our Work in Action
               </h4>
               <ServiceCarousel />
+            </div>
+
+            {/* Upcoming Courses Section */}
+            <div id="upcoming-courses" className="mt-20 pt-16 border-t border-border">
+              <div className="text-center max-w-3xl mx-auto mb-12 space-y-4">
+                <h2 className="text-sm font-bold tracking-widest text-primary uppercase">
+                  Enhance Your Skills
+                </h2>
+                <h3 className="text-4xl md:text-5xl font-serif font-bold text-primary">
+                  Upcoming Courses
+                </h3>
+                <div className="w-16 h-1 bg-secondary rounded-full mx-auto"></div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {[
+                  { id: "01", name: "OIL LCHS – IMO Model 2.06", duration: "05 Days", target: "Deck Officers – Oil Tankers", requirement: "SIRE 2.0 – 3.3.3" },
+                  { id: "02", name: "CHEM LCHS – IMO Model 1.37", duration: "05 Days", target: "Deck Officers – Chem Tankers", requirement: "SIRE 2.0 – 3.3.3" },
+                  { id: "03", name: "LPG LCHS - IMO Model 1.35", duration: "05 Days", target: "Deck Officers – LPG Tankers", requirement: "SIRE 2.0 – 3.3.3" },
+                  { id: "04", name: "LNG LCHS - IMO Model 1.36", duration: "05 Days", target: "Deck Officers – LNG Tankers", requirement: "SIRE 2.0 – 3.3.3" },
+                  { id: "05", name: "BRM – IMO Model 1.22", duration: "05 Days", target: "Deck Officers", requirement: "SIRE 2.0 – 3.3.1" },
+                  { id: "06", name: "ERM Simulator – IMO Model 2.07", duration: "05 Days", target: "Engineer Officers", requirement: "SIRE 2.0 – 3.3.4" },
+                  { id: "07", name: "SIRE 2.0 – Finer Points", duration: "02 Days", target: "Shore & Sailing Staff", requirement: "Industry Standard" },
+                  { id: "08", name: "RISQ – Revised Guidelines", duration: "02 Days", target: "Bulk Carrier Staff", requirement: "Rightship Gap" },
+                  { id: "09", name: "MAN B&W ME Engines", duration: "05 Days", target: "Engineer Officers", requirement: "Engine Proficiency" },
+                  { id: "10", name: "VDR Analyst", duration: "02 Days", target: "Senior Deck Officers", requirement: "SIRE 2.0 Requirement" },
+                ].map((course) => (
+                  <Card key={course.id} className="group hover:border-secondary transition-all duration-300 shadow-sm hover:shadow-md">
+                    <CardContent className="p-6">
+                      <div className="flex justify-between items-start mb-4">
+                        <span className="text-xs font-bold text-secondary uppercase tracking-tighter">Course {course.id}</span>
+                        <span className="text-xs font-medium bg-primary/5 text-primary px-2 py-1 rounded">{course.duration}</span>
+                      </div>
+                      <h4 className="font-serif font-bold text-lg text-primary mb-3 group-hover:text-secondary transition-colors line-clamp-2 h-14">
+                        {course.name}
+                      </h4>
+                      <div className="space-y-2">
+                        <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                          <Users className="w-3.5 h-3.5 text-secondary" />
+                          <span>{course.target}</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                          <Award className="w-3.5 h-3.5 text-secondary" />
+                          <span>{course.requirement}</span>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+              
+              <div className="mt-12 text-center">
+                <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white" onClick={() => {
+                  const element = document.getElementById('contact');
+                  if (element) {
+                    window.scrollTo({ top: element.offsetTop - 80, behavior: 'smooth' });
+                  }
+                }}>
+                  View All 30+ Courses
+                </Button>
+              </div>
             </div>
           </div>
         </section>

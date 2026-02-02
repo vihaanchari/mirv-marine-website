@@ -140,6 +140,11 @@ export const CONTENT = {
       role: "Head of Operations",
       bio: "Has previous experience of 13 years as Fleet Personnel Manager with d’Amico Ship India Pvt Ltd. Kolkata, specializing in crew management, planning and statutory compliance across fleet operations. Integral part of MiRV MARiNE since its inception.",
     },
+    {
+      name: "Ivona Krizmanic",
+      role: "Cybersecurity Consultant",
+      bio: "With a MEng degree in Electronics & Computer Engineering and as an ISO/IEC 27001:2022 Internal Auditor, she has more than 15 years experience in Practical cyber resilience for safety-critical maritime operations & Shipboard and shore-based cyber risk assessments based on IT/OT segregation and secure architecture advisory, Vulnerability and lifecycle risk management",
+    },
   ],
   contact: {
     locations: ["Kolkata, India", "Abu Dhabi, UAE"],
