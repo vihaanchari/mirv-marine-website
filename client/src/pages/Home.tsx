@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { HeroCarousel } from "@/components/home/HeroCarousel";
@@ -5,10 +6,46 @@ import { ServiceCarousel } from "@/components/home/ServiceCarousel";
 import { CONTENT, ASSETS } from "@/lib/content";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { CheckCircle2, Award, Anchor, Users } from "lucide-react";
+import { CheckCircle2, Award, Anchor, Users, ChevronDown, ChevronUp, Clock, Info } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export default function Home() {
+  const [showAllCourses, setShowAllCourses] = useState(false);
+
+  const courses = [
+    { id: "01", name: "OIL LCHS – IMO Model 2.06", duration: "05 Days", target: "Deck Officers – Oil Tankers", requirement: "SIRE 2.0 – 3.3.3", remarks: "Conducted Online with Cloud SIM" },
+    { id: "02", name: "OIL LCHS - Refresher", duration: "03 Days", target: "Deck Officers – Oil Tankers", requirement: "SIRE 2.0 – 3.3.3", remarks: "Conducted Online with Cloud SIM" },
+    { id: "03", name: "CHEM LCHS – IMO Model 1.37", duration: "05 Days", target: "Deck Officers – Chem Tankers", requirement: "SIRE 2.0 – 3.3.3", remarks: "Conducted Online with Cloud SIM" },
+    { id: "04", name: "CHEM LCHS - Refresher", duration: "03 Days", target: "Deck Officers – Chem Tankers", requirement: "SIRE 2.0 – 3.3.3", remarks: "Conducted Online with Cloud SIM" },
+    { id: "05", name: "LPG LCHS - IMO Model 1.35", duration: "05 Days", target: "Deck Officers – LPG Tankers", requirement: "SIRE 2.0 – 3.3.3", remarks: "Conducted Online with Cloud SIM" },
+    { id: "06", name: "LPG LCHS - Refresher", duration: "03 Days", target: "Deck Officers – LPG Tankers", requirement: "SIRE 2.0 – 3.3.3", remarks: "Conducted Online with Cloud SIM" },
+    { id: "07", name: "LNG LCHS - IMO Model 1.36", duration: "05 Days", target: "Deck Officers – LNG Tankers", requirement: "SIRE 2.0 – 3.3.3", remarks: "Conducted Online with Cloud SIM" },
+    { id: "08", name: "LNG LCHS - Refresher", duration: "03 Days", target: "Deck Officers – LNG Tankers", requirement: "SIRE 2.0 – 3.3.3", remarks: "Conducted Online with Cloud SIM" },
+    { id: "09", name: "BRM – IMO Model 1.22", duration: "05 Days", target: "Deck Officers", requirement: "SIRE 2.0 – 3.3.1", remarks: "Conducted Online with Cloud SIM" },
+    { id: "10", name: "ERM Simulator – IMO Model 2.07", duration: "05 Days", target: "Engineer Officers", requirement: "SIRE 2.0 – 3.3.4", remarks: "Conducted Online with Cloud SIM" },
+    { id: "11", name: "SIRE 2.0 – Finer Points", duration: "02 Days", target: "All Shore & Sailing Staff on Tankers", requirement: "Industry Standard", remarks: "Online & Onsite with Demo Sire 2.0 inspection" },
+    { id: "12", name: "RISQ – Revised Guidelines", duration: "02 Days", target: "All Shore & Sailing Staff on Bulk Carriers", requirement: "Rightship Requirements", remarks: "Online & Onsite with Demo inspection" },
+    { id: "13", name: "M/E - MAN B&W ME LGIM-W", duration: "04 days", target: "All Engineers", requirement: "Methanol Powered Vessels", remarks: "Conducted Online/Offline" },
+    { id: "14", name: "MAN B&W ME B/C Engines", duration: "05 Days", target: "Engineer Officers", requirement: "ME Engines Proficiency", remarks: "Conducted Online with/without Cloud SIM" },
+    { id: "15", name: "MAN B&W ME GI (LNG)", duration: "4 Days", target: "Engineer Officers", requirement: "Alternate Fuel Types", remarks: "Conducted Online with/without Cloud SIM" },
+    { id: "16", name: "MAN B&W ME Engines Refresher", duration: "02 Days", target: "Engineer Officers", requirement: "Latest Technologies", remarks: "Conducted Online with/without Cloud SIM" },
+    { id: "17", name: "Nitrogen Generator Training", duration: "02 days", target: "All Engineers & Senior Deck Officers", requirement: "Dual Fuel & Chemical Tankers", remarks: "Conducted Online/Offline" },
+    { id: "18", name: "Wartsila X DF Engine", duration: "04 Days", target: "Engineer Officers", requirement: "X DF Engines Proficiency", remarks: "Conducted Online with/without Cloud SIM" },
+    { id: "19", name: "IHM Expert", duration: "03 Days", target: "All Officers", requirement: "Hongkong Convention 2020", remarks: "Online + training on board" },
+    { id: "20", name: "VDR Analyst", duration: "02 Days", target: "Senior Deck Officers", requirement: "SIRE 2.0 External Requirement", remarks: "Online / Onsite" },
+    { id: "21", name: "HAZMAT", duration: "01 Day", target: "All Officers & Crew", requirement: "IMDG Requirement", remarks: "Online / Onsite" },
+    { id: "22", name: "MARPOL & SOLAS REQUIREMENTS", duration: "02 Days", target: "All Officers", requirement: "Statutory Compliance", remarks: "Online / Onsite" },
+    { id: "23", name: "ISM CODE INTERNAL AUDITOR", duration: "03 Days", target: "All Officers", requirement: "Quality Management", remarks: "Industry Standard" },
+    { id: "24", name: "ISM CODE LEAD AUDITOR", duration: "03 Days", target: "All Officers", requirement: "Advanced Quality Mgmt", remarks: "Industry Standard" },
+    { id: "25", name: "ISO 9001:2015 QMS", duration: "03 Days", target: "All Officers", requirement: "Internal Auditor", remarks: "Quality Systems" },
+    { id: "26", name: "ISO 14001:2015 EMS", duration: "03 Days", target: "All Officers & Crew", requirement: "Environmental Mgmt", remarks: "Sustainability" },
+    { id: "27", name: "ISO 45001:2018 OH&S", duration: "01 Day", target: "All Officers & Crew", requirement: "Health & Safety", remarks: "Workplace Safety" },
+    { id: "28", name: "INTEGRATED MANAGEMENT SYSTEMS", duration: "03 Days", target: "All Officers & Crew", requirement: "IMS Internal Auditor", remarks: "Comprehensive Systems" },
+    { id: "29", name: "ISPS CODE INTERNAL AUDITOR", duration: "02 Days", target: "All Officers & Crew", requirement: "Security Management", remarks: "Vessel Security" },
+    { id: "30", name: "MARITIME LABOUR CONVENTION", duration: "02 Days", target: "All Officers & Crew", requirement: "MLC 2006 Inspector", remarks: "Labour Standards" },
+  ];
+
+  const visibleCourses = showAllCourses ? courses : courses.slice(0, 9);
   return (
     <div className="min-h-screen flex flex-col bg-background font-sans">
       <Navbar />
@@ -167,35 +204,31 @@ export default function Home() {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {[
-                  { id: "01", name: "OIL LCHS – IMO Model 2.06", duration: "05 Days", target: "Deck Officers – Oil Tankers", requirement: "SIRE 2.0 – 3.3.3" },
-                  { id: "02", name: "CHEM LCHS – IMO Model 1.37", duration: "05 Days", target: "Deck Officers – Chem Tankers", requirement: "SIRE 2.0 – 3.3.3" },
-                  { id: "03", name: "LPG LCHS - IMO Model 1.35", duration: "05 Days", target: "Deck Officers – LPG Tankers", requirement: "SIRE 2.0 – 3.3.3" },
-                  { id: "04", name: "LNG LCHS - IMO Model 1.36", duration: "05 Days", target: "Deck Officers – LNG Tankers", requirement: "SIRE 2.0 – 3.3.3" },
-                  { id: "05", name: "BRM – IMO Model 1.22", duration: "05 Days", target: "Deck Officers", requirement: "SIRE 2.0 – 3.3.1" },
-                  { id: "06", name: "ERM Simulator – IMO Model 2.07", duration: "05 Days", target: "Engineer Officers", requirement: "SIRE 2.0 – 3.3.4" },
-                  { id: "07", name: "SIRE 2.0 – Finer Points", duration: "02 Days", target: "Shore & Sailing Staff", requirement: "Industry Standard" },
-                  { id: "08", name: "RISQ – Revised Guidelines", duration: "02 Days", target: "Bulk Carrier Staff", requirement: "Rightship Gap" },
-                  { id: "09", name: "MAN B&W ME Engines", duration: "05 Days", target: "Engineer Officers", requirement: "Engine Proficiency" },
-                  { id: "10", name: "VDR Analyst", duration: "02 Days", target: "Senior Deck Officers", requirement: "SIRE 2.0 Requirement" },
-                ].map((course) => (
-                  <Card key={course.id} className="group hover:border-secondary transition-all duration-300 shadow-sm hover:shadow-md">
+                {visibleCourses.map((course) => (
+                  <Card key={course.id} className="group hover:border-secondary transition-all duration-300 shadow-sm hover:shadow-md bg-white border-primary/10">
                     <CardContent className="p-6">
                       <div className="flex justify-between items-start mb-4">
                         <span className="text-xs font-bold text-secondary uppercase tracking-tighter">Course {course.id}</span>
-                        <span className="text-xs font-medium bg-primary/5 text-primary px-2 py-1 rounded">{course.duration}</span>
+                        <div className="flex items-center gap-1.5 text-xs font-medium bg-primary/5 text-primary px-2.5 py-1 rounded-full">
+                          <Clock className="w-3 h-3" />
+                          {course.duration}
+                        </div>
                       </div>
-                      <h4 className="font-serif font-bold text-lg text-primary mb-3 group-hover:text-secondary transition-colors line-clamp-2 h-14">
+                      <h4 className="font-serif font-bold text-lg text-primary mb-4 group-hover:text-secondary transition-colors line-clamp-2 h-14 leading-tight">
                         {course.name}
                       </h4>
-                      <div className="space-y-2">
-                        <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                          <Users className="w-3.5 h-3.5 text-secondary" />
-                          <span>{course.target}</span>
+                      <div className="space-y-3">
+                        <div className="flex items-start gap-2.5 text-xs text-muted-foreground">
+                          <Users className="w-4 h-4 text-secondary shrink-0 mt-0.5" />
+                          <span className="leading-relaxed">{course.target}</span>
                         </div>
-                        <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                          <Award className="w-3.5 h-3.5 text-secondary" />
-                          <span>{course.requirement}</span>
+                        <div className="flex items-start gap-2.5 text-xs text-muted-foreground">
+                          <Award className="w-4 h-4 text-secondary shrink-0 mt-0.5" />
+                          <span className="leading-relaxed font-medium text-slate-700">{course.requirement}</span>
+                        </div>
+                        <div className="flex items-start gap-2.5 text-xs text-muted-foreground pt-2 border-t border-slate-100 italic">
+                          <Info className="w-4 h-4 text-primary/40 shrink-0 mt-0.5" />
+                          <span className="leading-relaxed">{course.remarks}</span>
                         </div>
                       </div>
                     </CardContent>
@@ -204,13 +237,17 @@ export default function Home() {
               </div>
               
               <div className="mt-12 text-center">
-                <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white" onClick={() => {
-                  const element = document.getElementById('contact');
-                  if (element) {
-                    window.scrollTo({ top: element.offsetTop - 80, behavior: 'smooth' });
-                  }
-                }}>
-                  View All 30+ Courses
+                <Button 
+                  size="lg"
+                  variant="outline" 
+                  className="border-primary text-primary hover:bg-primary hover:text-white px-8 h-14 font-bold transition-all shadow-sm"
+                  onClick={() => setShowAllCourses(!showAllCourses)}
+                >
+                  {showAllCourses ? (
+                    <>Show Less <ChevronUp className="ml-2 w-5 h-5" /></>
+                  ) : (
+                    <>Explore All 30+ Courses <ChevronDown className="ml-2 w-5 h-5" /></>
+                  )}
                 </Button>
               </div>
             </div>
