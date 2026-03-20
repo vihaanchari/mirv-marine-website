@@ -18,7 +18,7 @@ export const ASSETS = {
     "/images/ss1.png", // Ship
     "/images/ss2.png", // Deck
     "/images/ss3.jpeg", // Sea
-    "/images/ss4.jpeg", // Training
+
     "/images/ss6.jpeg",
     "/images/ss7.jpeg",
     "/images/ss8.jpeg",
@@ -28,7 +28,7 @@ export const ASSETS = {
   gallery: [
     "/images/a1_1767092884153.png",
     "/images/a2_1767092884156.jpeg",
-    "/images/a3_1767092884157.jpeg",
+
     "/images/a4_1767092884157.jpeg",
     "/images/a5_1767092884158.jpeg",
     "/images/a6_1767092884159.jpeg",
@@ -41,7 +41,7 @@ export const ASSETS = {
     "/images/a13_1767092884163.jpeg",
     "/images/a14_1767092884163.jpeg",
     "/images/a15_1767092884163.jpeg",
-    "/images/a16_1767092884164.jpeg",
+
     "/images/a17_1767092884164.jpeg",
   ],
 };
