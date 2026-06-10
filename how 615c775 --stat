@@ -1,0 +1,45 @@
+[33mf88c7e7[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31mgitsafe-backup/main[m[33m)[m Organize website assets by moving all images and the favicon directly into the client folder
+[33m1bc220f[m fix static file serving
+[33ma9342a6[m fix static file serving
+[33mebba530[m simplify package.json scripts
+[33mf1459d2[m replace React with plain HTML for GEO optimization
+[33md09599c[m Transition website to static HTML and remove React dependencies
+[33m76073bb[m Improve course display and button styles while removing partnership section
+[33ma2ecc5e[m Improve website layout, color scheme, and add scroll animations
+[33m95cc6c1[m Add new static HTML and JavaScript version of the entire website
+[33m61d74a9[m Add company logos above the global associations text
+[33m391bd37[m Add global associations and FAQ sections to the homepage
+[33m615c775[m add GEO optimized meta tags and schema markup
+[33mf2e2b6e[m Prepare project for Vercel deployment by updating build scripts and configurations
+[33m626052a[m Prepare site for Vercel deployment by removing Replit plugins
+[33m09612d9[m Published your App
+[33m085284d[m Published your App
+[33m04d028f[m Add detailed course information and expandable list to the website
+[33m2322db3[m Add an upcoming courses section with detailed course information
+[33m185720b[m Published your App
+[33mebbabfd[m Add a new section showcasing associated companies and their logos
+[33ma8d2e1d[m Published your App
+[33mf3101f1[m Published your App
+[33me6c87a0[m Published your App
+[33m32567bb[m Published your App
+[33m4079376[m Published your App
+[33m9f38a31[m Update the home page slideshow images to reflect new company branding
+[33mcbb645a[m Update slideshow with new images and interactive navigation controls
+[33m2145f10[m Add an external link to the Shipfinite Job Portal within services
+[33me68ebe5[m Apply smooth scrolling to all quick links in the footer
+[33mbc2ab32[m Add a gradient background to the top navigation bar
+[33m75463f9[m Add gentle scrolling animation to all navigation links
+[33m76ef16f[m Update website navigation to refresh on logo click and scroll on home click
+[33m3ade782[m Add smooth scrolling to all navigation links across the site
+[33m6e5cbb2[m Improve website navigation with smooth scrolling animations
+[33mea54648[m Add smooth scrolling animation to all navigation buttons
+[33ma0d7b40[m Update website navigation and company information display
+[33m813d1ed[m Update the company's about section image and add new slideshow images
+[33m841f334[m Add a new image slideshow below the services section
+[33m5ae790f[m Update location text with white brackets
+[33m8cc91c9[m Reduce font size for company location details on homepage
+[33m7a13d8f[m Update hero slideshow text styling and content
+[33mbd7f9cb[m Update website header and slideshow text with new information
+[33m1b67448[m Update website design and content for MiRV MARiNE LLP
+[33mc5c6f47[m Extracted stack files
+[33mea5f9dd[m Initial commit

@@ -8,7 +8,31 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, Award, Anchor, Users, ChevronDown, ChevronUp, Clock, Info } from "lucide-react";
 import { cn } from "@/lib/utils";
-
+function FaqItem({ question, answer }: { question: string; answer: string }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="border border-primary/15 rounded-lg bg-white shadow-sm overflow-hidden">
+      <button
+        className="w-full flex justify-between items-start gap-4 px-6 py-5 text-left hover:bg-primary/5 transition-colors"
+        onClick={() => setOpen(!open)}
+      >
+        <span className="font-serif font-bold text-primary text-base leading-snug">
+          {question}
+        </span>
+        {open ? (
+          <ChevronUp className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
+        ) : (
+          <ChevronDown className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
+        )}
+      </button>
+      {open && (
+        <div className="px-6 pb-5 text-sm text-muted-foreground leading-relaxed border-t border-primary/10 pt-4">
+          {answer}
+        </div>
+      )}
+    </div>
+  );
+}
 export default function Home() {
   const [showAllCourses, setShowAllCourses] = useState(false);
 
@@ -308,6 +332,47 @@ export default function Home() {
           </div>
         </section>
 
+        {/* FAQ Section */}
+        <section id="faq" className="py-20 bg-slate-50 border-y border-border">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+              <h2 className="text-sm font-bold tracking-widest text-secondary uppercase">
+                Got Questions?
+              </h2>
+              <h3 className="text-4xl md:text-5xl font-serif font-bold text-primary">
+                Frequently Asked Questions
+              </h3>
+              <div className="w-16 h-1 bg-secondary rounded-full mx-auto"></div>
+            </div>
+
+            <div className="max-w-3xl mx-auto space-y-4">
+              {[
+                {
+                  q: "What maritime training courses does MiRV Marine offer in Kolkata?",
+                  a: "MiRV Marine LLP offers 30+ IMO-approved maritime training courses including OIL/CHEM/LNG LCHS, BRM, ERM, AHTS, JRM, and SIRE 2.0 familiarization. Courses are conducted online with cloud-based simulator access and are ABS certified."
+                },
+                {
+                  q: "Does MiRV Marine provide vessel inspection and audit services?",
+                  a: "Yes. MiRV Marine has completed over 200 vessel audits including ISM, ISPS, MLC Dynamic Audits, VDR Analysis, Remote Navigation Audits, and Pre-Purchase/Pre-Vetting Inspections."
+                },
+                {
+                  q: "Where is MiRV Marine located and does it operate internationally?",
+                  a: "MiRV Marine LLP is registered in Kolkata, West Bengal, India. The company also operates internationally as MiRV Marine Services LLC in the UAE, catering to the Main Fleet and Oil & Gas industry worldwide."
+                },
+                {
+                  q: "Is MiRV Marine certified and accredited?",
+                  a: "Yes. MiRV Marine LLP holds ISO certification from ABS Class and is an ABS certified training provider. The company was founded in 2019 and registered as an LLP in April 2024."
+                },
+                {
+                  q: "Who leads MiRV Marine and what is their experience?",
+                  a: "MiRV Marine is led by Capt. Indraneel Chari (Managing Partner & Founder), a certified VDR analyst, lead auditor, and maritime trainer with command experience since 2007. The leadership team includes Capt. Sudhir Kandhari (CEO) with 30+ years maritime experience; Cmde. Vinay Kalia (SME Marine) with 35+ years Indian Navy service; Mr. Krishan Nair (SME Technical), offshore industry expert since 2003 and Maersk Training alumni; Mr. Saswata Das (Head of Operations) with 13 years as Fleet Personnel Manager at d'Amico Ship India; and Ivona Krizmanic (Cybersecurity Consultant), ISO/IEC 27001:2022 Internal Auditor with 15+ years maritime cyber resilience experience."
+                },
+              ].map((item, index) => (
+                <FaqItem key={index} question={item.q} answer={item.a} />
+              ))}
+            </div>
+          </div>
+        </section>
         {/* Team Section */}
         <section id="team" className="py-20 relative bg-primary text-white">
           <div className="absolute inset-0 bg-[url('/attached_assets/Screenshot_2025-12-18_140054_1766130651823.png')] bg-cover bg-fixed opacity-10 mix-blend-overlay"></div>
@@ -367,6 +432,9 @@ export default function Home() {
                 alt="Associated Companies"
                 className="w-full h-auto object-contain mx-auto"
               />
+              <p className="mt-8 text-base text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+                MiRV Marine LLP is proud to be associated with leading global maritime organizations including Maersk Training, ADNOC, Zamil Offshore, Shoei Kisen, Fuyo Kaiun, Simwave Maritime Centres of Excellence, North Sea Shipping, Fairmacs Group, and DSM. These associations reflect MiRV Marine's commitment to international maritime standards and global industry compliance.
+              </p>
             </div>
           </div>
         </section>
