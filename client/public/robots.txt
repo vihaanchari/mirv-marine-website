@@ -16,4 +16,4 @@ Allow: /
 User-agent: anthropic-ai
 Allow: /
 
-Sitemap: https://mirvmarine.co.in/sitemap.xml
+Sitemap: https://www.mirvmarine.co.in/sitemap.xml
