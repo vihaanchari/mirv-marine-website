@@ -1,0 +1,1059 @@
+You are redesigning the EXISTING MiRV Marine LLP website in this Replit project.
+
+The current website is functional, but visually it looks plain, generic, and AI-generated. I want a COMPLETE visual redesign that makes it feel like a premium, established maritime company — cinematic, luxurious, sophisticated, modern and human-designed.
+
+IMPORTANT: This is a REDESIGN, not a content rewrite.
+
+==================================================
+
+1. CORE OBJECTIVE
+   ==================================================
+
+Completely redesign the existing MiRV Marine LLP website while preserving ALL existing:
+
+* Website content
+* Company information
+* Service descriptions
+* About information
+* Contact information
+* Certifications
+* FAQs
+* Existing pages
+* Existing SEO content
+* Existing links
+* Existing forms and functionality
+* Existing business claims
+* Existing images where they are still appropriate
+
+DO NOT invent new company information.
+
+DO NOT make up clients, certifications, statistics, awards, locations, experience, partnerships or achievements.
+
+DO NOT rewrite the company's content simply to make it sound more "AI generated" or marketing-heavy.
+
+The content should remain factually the same.
+
+You are redesigning the EXPERIENCE and PRESENTATION.
+
+Before changing anything, inspect the entire existing project and understand:
+
+* Current file structure
+* Existing HTML
+* CSS
+* JavaScript
+* Server setup
+* Existing routes
+* Existing SEO implementation
+* Existing sitemap
+* robots.txt
+* structured data/schema
+* existing images/assets
+* forms
+* navigation
+* mobile responsiveness
+
+Do not blindly replace the existing project.
+
+==================================================
+2. TECHNOLOGY REQUIREMENT — VERY IMPORTANT
+==========================================
+
+DO NOT convert the frontend to React.
+
+DO NOT introduce React components.
+
+DO NOT introduce Next.js.
+
+DO NOT convert the website into a SPA.
+
+The publicly accessible website should use:
+
+* Plain semantic HTML
+* CSS
+* Vanilla JavaScript only where necessary
+
+The actual textual content must exist directly in the HTML DOM so that:
+
+* Google can crawl it
+* Search engines can understand it
+* AI search engines can understand it
+* LLM-based crawlers can retrieve the content
+* Accessibility tools can interpret it
+
+Do NOT put important website text inside images or canvas.
+
+Do NOT render the main page content only through JavaScript.
+
+Use semantic HTML5:
+
+<header>
+<nav>
+<main>
+<section>
+<article>
+<aside>
+<footer>
+<h1>
+<h2>
+<h3>
+<p>
+<ul>
+<li>
+
+Use normal crawlable anchor links.
+
+==================================================
+3. DO NOT BREAK THE EXISTING BACKEND
+====================================
+
+The current project may contain server-side functionality.
+
+Do not unnecessarily rewrite or remove the backend.
+
+Do not break:
+
+* Contact forms
+* API endpoints
+* Email functionality
+* Database functionality
+* Existing routes
+* Existing integrations
+* Existing deployment configuration
+
+Only change what is necessary for the redesign.
+
+If the current project has a backend serving the frontend, keep that architecture working.
+
+The frontend itself must remain plain HTML/CSS/vanilla JS.
+
+==================================================
+4. VISUAL DIRECTION
+===================
+
+The entire website should feel:
+
+LUXURIOUS
+CINEMATIC
+DARK
+SLEEK
+MARITIME
+PREMIUM
+EDITORIAL
+SOPHISTICATED
+TECHNICAL
+ESTABLISHED
+HUMAN-DESIGNED
+
+Avoid anything that looks like a generic AI-generated SaaS template.
+
+The website should feel closer to a premium international maritime consultancy / engineering company than a startup landing page.
+
+Think:
+
+Luxury marine engineering
+Editorial design
+High-end industrial photography
+Dark cinematic interfaces
+Premium architecture websites
+Luxury automotive websites
+Modern maritime brands
+
+NOT:
+
+Generic AI startup
+Purple gradient SaaS
+Generic glassmorphism template
+Excessive rounded cards
+Stock "business people" imagery
+Robot imagery
+Glowing AI brains
+Generic blue technology backgrounds
+
+==================================================
+5. COLOUR SYSTEM
+================
+
+Use a dark colour palette throughout the site.
+
+Primary:
+
+Near-black / charcoal:
+#080808
+#0D0D0D
+#121212
+
+Gold:
+
+Use an elegant metallic/warm gold:
+#C9A227
+#D4AF37
+#E2C15A
+
+Red:
+
+Use a deep premium maritime red rather than bright neon red:
+#6E1515
+#8B1E1E
+#A52A2A
+
+Supporting colours:
+
+Warm white:
+#F4F1EA
+
+Muted text:
+#A8A8A8
+
+Borders:
+rgba(212,175,55,0.15)
+
+Do NOT use excessive gold everywhere.
+
+Gold should be an accent.
+
+Red should be used strategically for emphasis, active states, small details and important visual moments.
+
+The majority of the website should remain sophisticated black/charcoal.
+
+==================================================
+6. TYPOGRAPHY
+=============
+
+Do NOT use the default generic website typography.
+
+Use a sophisticated font pairing.
+
+Use one elegant display/heading font and one highly readable body font.
+
+Possible direction:
+
+Headings:
+Cormorant Garamond / DM Serif Display / Playfair Display
+
+Body/UI:
+Inter / Manrope / DM Sans
+
+Use typography intentionally.
+
+Large editorial headlines.
+
+Small uppercase labels.
+
+Generous letter spacing.
+
+Strong typographic hierarchy.
+
+Use different weights and sizes to create visual rhythm.
+
+Avoid making every heading bold.
+
+Use typography as part of the visual design.
+
+==================================================
+7. HERO SECTION
+===============
+
+Completely redesign the hero.
+
+The hero should immediately communicate:
+
+MiRV Marine LLP
+Maritime expertise
+Professionalism
+Engineering / consultancy / training / marine services as already represented in the existing content
+
+Use a cinematic full-screen or near-full-screen composition.
+
+The hero should contain:
+
+* Strong editorial typography
+* Existing company messaging
+* High-quality maritime visual
+* Dark cinematic treatment
+* Gold/red accents
+* Subtle atmospheric overlays
+* Layered depth
+* Minimal UI
+* Elegant CTA buttons
+
+Do NOT overcrowd the hero.
+
+The first screen should feel expensive.
+
+Use subtle movement:
+
+* slow background movement
+* image depth/parallax
+* text reveal
+* gold light movement
+* subtle grain
+* floating atmospheric particles only if performance allows
+
+The animation should remain sophisticated.
+
+==================================================
+8. MARITIME IMAGERY
+===================
+
+Use high-quality maritime imagery.
+
+Prioritize:
+
+* Ships
+* Vessels
+* Ports
+* Marine engineers
+* Navigation
+* Offshore environments
+* Ship machinery
+* Ocean environments
+* Maritime operations
+* Technical inspections
+* Training environments
+
+Images should look cinematic and realistic.
+
+Avoid cheesy stock photography.
+
+Avoid images with obvious AI artifacts.
+
+Use dark cinematic colour grading.
+
+Apply subtle overlays so text remains readable.
+
+If existing company images are available, prioritize them over generic stock imagery.
+
+DO NOT fabricate photos of company personnel, clients or projects and present them as real.
+
+==================================================
+9. SPATIALLY STAGGERED LAYOUT
+=============================
+
+This is extremely important.
+
+Do NOT make the website a simple sequence of:
+
+Heading
+Cards
+Heading
+Cards
+Heading
+Cards
+
+Instead, create spatial depth.
+
+Use:
+
+* Angled panels
+* Offset cards
+* Overlapping images
+* Layered sections
+* Asymmetric grids
+* Floating content blocks
+* Large typography
+* Full-width imagery
+* Split layouts
+* Vertical offsets
+* Diagonal visual elements
+* Cropped image compositions
+* Depth between foreground/background elements
+
+Scrolling should feel like moving through a physical/digital space.
+
+Sections should not all have identical widths and structures.
+
+Create deliberate visual rhythm.
+
+For example:
+
+Section 1:
+Full-screen hero
+
+Section 2:
+Large editorial statement + offset maritime image
+
+Section 3:
+Asymmetric services composition
+
+Section 4:
+Large cinematic image + overlapping technical information
+
+Section 5:
+Timeline/process with spatial movement
+
+Section 6:
+Certifications / expertise using elegant editorial layout
+
+Section 7:
+FAQ using premium accordion
+
+Section 8:
+Large contact/CTA composition
+
+Do not make every section look like a SaaS card grid.
+
+==================================================
+10. GLASS / MATERIAL DESIGN
+===========================
+
+Use a restrained luxury glass aesthetic.
+
+Use:
+
+* translucent black panels
+* subtle backdrop blur
+* thin gold borders
+* soft shadows
+* glass overlays
+* subtle reflections
+* layered surfaces
+
+BUT:
+
+Do not turn every element into glass.
+
+Glass should be used selectively.
+
+The website should feel like:
+
+black metal + glass + brushed gold
+
+rather than:
+
+"glassmorphism template".
+
+==================================================
+11. SCROLL-TRIGGERED ANIMATIONS
+===============================
+
+Implement sophisticated scroll-triggered reveals.
+
+Use vanilla JavaScript with IntersectionObserver.
+
+Do NOT use heavy animation libraries unless absolutely necessary.
+
+Animations should include:
+
+* Fade-up reveals
+* Horizontal reveals
+* Image clipping reveals
+* Text line reveals
+* Staggered cards
+* Section transitions
+* Image scale reveals
+* Mask reveals
+* Parallax depth
+* Counter animations where existing numeric content supports them
+* Navigation state transitions
+
+Animations should feel deliberate and cinematic.
+
+Avoid:
+
+* excessive bouncing
+* spinning elements
+* cartoon animations
+* huge movement
+* distracting effects
+* animations on every single element
+
+==================================================
+12. PERFORMANCE — TARGET 60 FPS
+===============================
+
+Performance is extremely important.
+
+Target:
+
+60 FPS animations wherever possible.
+
+Use GPU-friendly CSS properties:
+
+transform
+opacity
+
+Avoid animating:
+
+top
+left
+width
+height
+box-shadow excessively
+
+Use:
+
+transform: translate3d()
+opacity
+will-change only when appropriate
+
+Avoid unnecessary JavaScript scroll listeners.
+
+Prefer IntersectionObserver.
+
+If parallax is required, use requestAnimationFrame efficiently and throttle work.
+
+Respect:
+
+prefers-reduced-motion
+
+Users who prefer reduced motion should receive minimal animation.
+
+Do not sacrifice mobile performance for desktop effects.
+
+==================================================
+13. MICRO-INTERACTIONS
+======================
+
+Add micro-interactions only where they improve usability.
+
+Examples:
+
+Navigation:
+
+* subtle underline animation
+* active section indicator
+
+Buttons:
+
+* elegant gold fill transition
+* subtle arrow movement
+* slight lift
+
+Cards:
+
+* slight depth shift
+* image movement
+* border illumination
+
+Images:
+
+* subtle zoom on hover
+
+FAQ:
+
+* smooth expansion
+* elegant plus → minus transition
+
+Cursor:
+
+If a custom cursor is used, make it extremely subtle and disable it on touch devices.
+
+Do not overdo micro-interactions.
+
+==================================================
+14. PAGE TRANSITIONS
+====================
+
+Create smooth transitions between pages.
+
+Use lightweight CSS/vanilla JS.
+
+Transitions should feel cinematic:
+
+* fade
+* subtle slide
+* clip/mask reveal
+
+Keep transitions extremely short and responsive.
+
+Do not create transitions that make navigation feel slow.
+
+Target a premium 60fps experience.
+
+==================================================
+15. NAVIGATION
+==============
+
+Create a premium navigation system.
+
+Desktop:
+
+* transparent/overlay navigation initially
+* transitions into a darker glass navigation when scrolling
+* elegant gold active indicator
+* minimal typography
+
+Mobile:
+
+* premium fullscreen/slide-out menu
+* smooth opening animation
+* accessible keyboard navigation
+* large tap targets
+
+Navigation must remain easy to use.
+
+==================================================
+16. SERVICES
+============
+
+Keep ALL existing services and their existing descriptions.
+
+Do not invent services.
+
+Present them in a more sophisticated way.
+
+Instead of generic rectangular cards, consider:
+
+* numbered service blocks
+* offset panels
+* image + text compositions
+* hover reveals
+* large typography
+* subtle gold/red visual indicators
+
+Each service should have a clear heading and crawlable text.
+
+==================================================
+17. ABOUT SECTION
+=================
+
+Keep all existing About content.
+
+Make it feel editorial.
+
+Use:
+
+* large typography
+* company story
+* maritime imagery
+* overlapping panels
+* subtle statistics ONLY if those statistics already exist in the current website
+
+Do not invent statistics.
+
+==================================================
+18. CERTIFICATIONS / CREDENTIALS
+================================
+
+Preserve all existing certifications and credentials.
+
+Make them visually prominent but restrained.
+
+Use elegant:
+
+* seals
+* typography
+* logos
+* horizontal layouts
+* technical metadata
+
+Do not fabricate certification logos or claims.
+
+==================================================
+19. FAQ
+=======
+
+Preserve the existing FAQ content.
+
+Use an elegant accordion.
+
+Important:
+
+The actual FAQ questions and answers must exist in the HTML.
+
+Do not load FAQ content only through JavaScript.
+
+Keep FAQPage structured data if it is already correctly implemented and valid.
+
+==================================================
+20. SEO — VERY IMPORTANT
+========================
+
+The redesign MUST NOT damage existing SEO.
+
+Preserve or improve:
+
+* <title>
+* meta description
+* canonical
+* robots meta
+* Open Graph
+* Twitter/X metadata
+* sitemap.xml
+* robots.txt
+* structured data
+* semantic headings
+* image alt text
+
+Every page must have:
+
+ONE clear H1.
+
+Use logical:
+
+H1
+H2
+H3
+
+Do not use headings purely for visual styling.
+
+==================================================
+21. GOOGLE SEARCH
+=================
+
+Make the site highly crawlable.
+
+Important content must be directly present in HTML.
+
+Do NOT hide important text behind:
+
+* JavaScript rendering
+* canvas
+* images
+* animations that prevent access
+* dynamically generated client-only content
+
+Search engines should be able to understand the website even if JavaScript is disabled.
+
+Use descriptive internal links.
+
+Example:
+
+"Maritime Consultancy Services"
+
+instead of:
+
+"Learn More"
+
+where appropriate.
+
+==================================================
+22. AI SEARCH / GEO
+===================
+
+Optimize the website for AI-powered search systems and answer engines.
+
+Important company information should be explicit and unambiguous.
+
+Clearly communicate:
+
+* Who MiRV Marine LLP is
+* What the company does
+* Where it operates
+* Its services
+* Its expertise
+* Relevant industries
+* Certifications
+* Training capabilities
+* Contact information
+* Frequently asked questions
+
+Use natural language.
+
+Do not keyword stuff.
+
+Do not write content specifically to manipulate AI systems.
+
+Make the information easy for an AI system to understand and cite.
+
+Use structured data where appropriate:
+
+Organization
+LocalBusiness if appropriate
+WebSite
+BreadcrumbList
+Service
+FAQPage where applicable
+
+Do not add schema for claims that aren't actually supported by the website.
+
+==================================================
+23. IMAGES + SEO
+================
+
+Every meaningful image should have descriptive alt text.
+
+Bad:
+
+alt="image"
+
+Good:
+
+alt="Marine vessel undergoing technical inspection at port"
+
+Do not keyword stuff alt text.
+
+Use modern image formats where appropriate:
+
+WebP / AVIF
+
+Use responsive images.
+
+Lazy-load below-the-fold images.
+
+Do NOT lazy-load the primary hero image if it is the LCP element.
+
+Set image dimensions to prevent layout shifts.
+
+==================================================
+24. CORE WEB VITALS
+===================
+
+Optimize specifically for:
+
+LCP
+INP
+CLS
+
+Target:
+
+LCP < 2.5 seconds
+CLS < 0.1
+INP < 200ms
+
+Prefer:
+
+* optimized images
+* minimal JavaScript
+* no unnecessary dependencies
+* CSS animations
+* IntersectionObserver
+* efficient DOM structure
+* lazy loading
+* responsive images
+
+Do not add libraries simply because they make animations easier.
+
+==================================================
+25. ACCESSIBILITY
+=================
+
+Maintain excellent accessibility.
+
+Include:
+
+* semantic HTML
+* keyboard navigation
+* visible focus states
+* accessible buttons
+* aria labels where necessary
+* sufficient contrast
+* reduced-motion support
+* proper form labels
+
+Do not sacrifice accessibility for aesthetics.
+
+==================================================
+26. RESPONSIVE DESIGN
+=====================
+
+The redesign must be excellent on:
+
+* Desktop
+* Laptop
+* Tablet
+* Mobile
+
+Do NOT simply shrink the desktop layout.
+
+Create intentional mobile compositions.
+
+On mobile:
+
+* preserve hierarchy
+* simplify spatial effects
+* reduce parallax
+* reduce animation complexity
+* maintain fast loading
+* prevent horizontal overflow
+
+==================================================
+27. DESIGN DETAILS
+==================
+
+Add subtle premium details such as:
+
+* Fine gold rules
+* Small uppercase labels
+* Section numbering
+* Editorial typography
+* Thin borders
+* Grain/noise texture
+* Subtle gradients
+* Gold light streaks
+* Dark glass panels
+* Image masks
+* Thin diagonal lines
+* Minimal geometric maritime motifs
+
+These should be subtle.
+
+The site should feel expensive because of composition and restraint, not because it contains lots of effects.
+
+==================================================
+28. WHAT NOT TO DO
+==================
+
+DO NOT:
+
+* Make it look like a generic AI-generated website
+* Use purple/blue AI gradients
+* Use generic AI robots
+* Use excessive rounded cards
+* Use excessive glassmorphism
+* Use excessive animations
+* Add fake testimonials
+* Add fake clients
+* Add fake statistics
+* Add fake certifications
+* Invent company history
+* Rewrite factual company information
+* Remove existing content
+* Remove existing SEO
+* Convert the frontend to React
+* Introduce Next.js
+* Turn the site into a SPA
+* Render core content only with JavaScript
+* Replace crawlable HTML with canvas
+* Add huge JavaScript animation libraries unnecessarily
+* Sacrifice performance for visual effects
+
+==================================================
+29. IMPORTANT: PRESERVE EXISTING CONTENT
+========================================
+
+Before modifying anything, crawl/read the existing website code and make a complete inventory of all content.
+
+Preserve:
+
+* Every important heading
+* Every service
+* Every paragraph
+* Every FAQ
+* Every contact detail
+* Every certification
+* Every company detail
+* Every important link
+
+If you think some content should be changed, DO NOT change it automatically.
+
+The priority is:
+
+EXISTING CONTENT + NEW DESIGN
+
+not
+
+NEW CONTENT + NEW DESIGN.
+
+==================================================
+30. FINAL DESIGN GOAL
+=====================
+
+When someone opens mirvmarine.co.in, the reaction should be:
+
+"This looks like a serious, established, premium maritime company."
+
+NOT:
+
+"This looks like a website generated by an AI website builder."
+
+The experience should feel:
+
+Cinematic.
+Dark.
+Elegant.
+Technical.
+Maritime.
+Luxurious.
+Confident.
+Minimal.
+Human-designed.
+
+The user should feel like they are moving through a premium digital environment as they scroll.
+
+Every section should have a reason to exist.
+
+Every animation should have a purpose.
+
+Every visual element should support the brand.
+
+==================================================
+31. IMPLEMENTATION PROCESS
+==========================
+
+Before writing code:
+
+1. Inspect the entire existing project.
+2. Identify the current frontend architecture.
+3. Identify every existing page.
+4. Identify all existing content.
+5. Identify all existing SEO/GEO implementation.
+6. Identify existing images/assets.
+7. Identify existing backend functionality.
+8. Create a redesign plan.
+9. Implement the redesign without losing existing functionality.
+
+After implementation:
+
+Run the project.
+
+Test:
+
+* Desktop
+* Mobile
+* Tablet
+* Navigation
+* Every page
+* Every link
+* Contact forms
+* Images
+* FAQ
+* Animations
+* Page transitions
+* SEO metadata
+* Structured data
+* robots.txt
+* sitemap.xml
+
+Fix:
+
+* console errors
+* broken links
+* layout shifts
+* horizontal overflow
+* animation jank
+* mobile issues
+* accessibility issues
+
+==================================================
+32. FINAL SELF-CHECK
+====================
+
+Before considering the task complete, verify:
+
+[ ] All existing content preserved
+[ ] No fake information added
+[ ] Dark luxury design
+[ ] Gold + deep red accent system
+[ ] Cinematic hero
+[ ] Premium typography
+[ ] Asymmetric spatial layouts
+[ ] Angled panels
+[ ] Offset cards
+[ ] Layered depth
+[ ] Scroll-triggered reveals
+[ ] IntersectionObserver used where appropriate
+[ ] Micro-interactions
+[ ] Smooth page transitions
+[ ] 60fps-oriented animations
+[ ] prefers-reduced-motion supported
+[ ] Mobile optimized
+[ ] Semantic HTML
+[ ] Crawlable text
+[ ] No React frontend
+[ ] No unnecessary animation libraries
+[ ] Existing backend preserved
+[ ] Existing SEO preserved
+[ ] Canonicals preserved
+[ ] Sitemap preserved
+[ ] robots.txt preserved
+[ ] Structured data preserved/improved
+[ ] Open Graph preserved/improved
+[ ] Image alt text
+[ ] Core Web Vitals considered
+[ ] No console errors
+[ ] No broken links
+
+Do not stop at making the site "look different."
+
+Make it feel like a completely new, premium digital experience while keeping MiRV Marine's actual information and functionality intact.
