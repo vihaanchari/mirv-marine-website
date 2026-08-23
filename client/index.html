@@ -238,14 +238,21 @@
      /* Gallery lightbox */
      body.lightbox-open { overflow: hidden; }
      .gallery-lightbox { position: fixed; z-index: 300; inset: 0; display: grid; place-items: center; padding: 32px 76px; background: rgba(3,5,9,.9); backdrop-filter: blur(10px); }
+     .gallery-lightbox { opacity: 0; visibility: hidden; transition: opacity .35s ease, visibility 0s linear .35s; }
+     .gallery-lightbox.is-open { opacity: 1; visibility: visible; transition-delay: 0s; }
      .gallery-lightbox[hidden] { display: none; }
      .gallery-lightbox-backdrop { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; background: transparent; cursor: default; }
-     .gallery-dialog { position: relative; z-index: 1; display: grid; width: min(1100px, 100%); grid-template-columns: auto minmax(0, 1fr) auto; grid-template-rows: auto minmax(0, 1fr) auto; gap: 16px; align-items: center; }
+     .gallery-dialog { position: relative; z-index: 1; display: grid; width: min(1100px, 100%); grid-template-columns: auto minmax(0, 1fr) auto; grid-template-rows: auto minmax(0, 1fr) auto; gap: 16px; align-items: center; opacity: 0; transform: translateY(18px) scale(.97); transition: opacity .42s cubic-bezier(.2,.65,.2,1), transform .42s cubic-bezier(.2,.65,.2,1); }
+     .gallery-lightbox.is-open .gallery-dialog { opacity: 1; transform: none; }
      .gallery-dialog h2 { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
      .gallery-lightbox-close { grid-column: 3; justify-self: end; width: 42px; height: 42px; border: 1px solid rgba(244,241,234,.4); background: rgba(8,8,8,.56); color: var(--paper); cursor: pointer; font-size: 1.45rem; line-height: 1; }
      .gallery-lightbox-close:hover, .gallery-lightbox-close:focus-visible, .gallery-arrow:hover, .gallery-arrow:focus-visible { border-color: var(--gold); background: var(--red); outline: none; }
      .gallery-lightbox-image-wrap { grid-column: 2; grid-row: 2; display: grid; min-width: 0; min-height: 0; place-items: center; }
      .gallery-lightbox-image { display: block; width: auto; max-width: 100%; height: auto; max-height: min(72vh, 720px); object-fit: contain; box-shadow: 0 18px 70px rgba(0,0,0,.5); }
+     .gallery-lightbox-image.is-pan-next { animation: gallery-pan-next .55s cubic-bezier(.2,.7,.2,1) both; }
+     .gallery-lightbox-image.is-pan-prev { animation: gallery-pan-prev .55s cubic-bezier(.2,.7,.2,1) both; }
+     @keyframes gallery-pan-next { from { opacity: .15; transform: translateX(56px) scale(.975); } to { opacity: 1; transform: translateX(0) scale(1); } }
+     @keyframes gallery-pan-prev { from { opacity: .15; transform: translateX(-56px) scale(.975); } to { opacity: 1; transform: translateX(0) scale(1); } }
      .gallery-arrow { display: grid; width: 48px; height: 48px; place-items: center; border: 1px solid rgba(244,241,234,.4); background: rgba(8,8,8,.56); color: var(--paper); cursor: pointer; }
      .gallery-arrow svg { width: 20px; height: 20px; }
      .gallery-arrow.prev { grid-column: 1; grid-row: 2; }
@@ -897,13 +904,16 @@
       showHeroSlide(0);
       startHeroAutoplay();
 
-      function showGalleryImage(index) {
+      function showGalleryImage(index, direction) {
         currentGalleryImage = (index + galleryTriggers.length) % galleryTriggers.length;
         const thumbnail = galleryTriggers[currentGalleryImage].querySelector("img");
+        galleryLightboxImage.classList.remove("is-pan-next", "is-pan-prev");
+        void galleryLightboxImage.offsetWidth;
         galleryLightboxImage.src = thumbnail.currentSrc || thumbnail.src;
         galleryLightboxImage.alt = thumbnail.alt;
         galleryLightboxCaption.textContent = thumbnail.alt;
         galleryLightboxCounter.textContent = String(currentGalleryImage + 1).padStart(2, "0") + " / " + String(galleryTriggers.length).padStart(2, "0");
+        if (direction) galleryLightboxImage.classList.add(direction === "prev" ? "is-pan-prev" : "is-pan-next");
       }
 
       function openGalleryLightbox(index, trigger) {
@@ -912,13 +922,17 @@
         galleryLightbox.hidden = false;
         galleryLightbox.setAttribute("aria-hidden", "false");
         document.body.classList.add("lightbox-open");
+        window.requestAnimationFrame(function () { galleryLightbox.classList.add("is-open"); });
         galleryLightboxClose.focus();
       }
 
       function closeGalleryLightbox() {
-        galleryLightbox.hidden = true;
+        galleryLightbox.classList.remove("is-open");
         galleryLightbox.setAttribute("aria-hidden", "true");
         document.body.classList.remove("lightbox-open");
+        window.setTimeout(function () {
+          if (!galleryLightbox.classList.contains("is-open")) galleryLightbox.hidden = true;
+        }, 400);
         if (galleryReturnFocus) galleryReturnFocus.focus();
       }
 
@@ -927,8 +941,8 @@
       });
       galleryLightboxBackdrop.addEventListener("click", closeGalleryLightbox);
       galleryLightboxClose.addEventListener("click", closeGalleryLightbox);
-      galleryLightboxPrevious.addEventListener("click", function () { showGalleryImage(currentGalleryImage - 1); });
-      galleryLightboxNext.addEventListener("click", function () { showGalleryImage(currentGalleryImage + 1); });
+      galleryLightboxPrevious.addEventListener("click", function () { showGalleryImage(currentGalleryImage - 1, "prev"); });
+      galleryLightboxNext.addEventListener("click", function () { showGalleryImage(currentGalleryImage + 1, "next"); });
 
       document.addEventListener("keydown", function (event) {
         if (galleryLightbox.hidden) return;
@@ -937,10 +951,10 @@
           closeGalleryLightbox();
         } else if (event.key === "ArrowLeft") {
           event.preventDefault();
-          showGalleryImage(currentGalleryImage - 1);
+          showGalleryImage(currentGalleryImage - 1, "prev");
         } else if (event.key === "ArrowRight") {
           event.preventDefault();
-          showGalleryImage(currentGalleryImage + 1);
+          showGalleryImage(currentGalleryImage + 1, "next");
         } else if (event.key === "Tab") {
           const focusable = Array.from(galleryLightbox.querySelectorAll("button:not([disabled]):not([tabindex='-1'])"));
           const first = focusable[0];
