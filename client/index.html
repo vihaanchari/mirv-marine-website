@@ -232,7 +232,7 @@
      .gallery-trigger::before { content: "View image"; position: absolute; z-index: 1; left: 14px; bottom: 14px; padding: 7px 10px; background: rgba(8,8,8,.82); color: var(--paper); font-size: .62rem; font-weight: 700; letter-spacing: .14em; opacity: 0; pointer-events: none; text-transform: uppercase; transform: translateY(5px); transition: opacity .25s ease, transform .25s ease; }
      .gallery-trigger:hover img, .gallery-trigger:focus-visible img { transform: scale(1.02); filter: saturate(.9) brightness(.93); }
      .gallery-trigger:hover::before, .gallery-trigger:focus-visible::before { opacity: 1; transform: none; }
-    .gallery-item::after { content: ""; position: absolute; inset: 0; border: 1px solid transparent; transition: border-color .3s ease; }
+     .gallery-item::after { content: ""; position: absolute; inset: 0; border: 1px solid transparent; pointer-events: none; transition: border-color .3s ease; }
      .gallery-item:hover::after, .gallery-item:focus-within::after { border-color: var(--gold); }
 
      /* Gallery lightbox */
