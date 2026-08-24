@@ -78,7 +78,7 @@
       {
         "@type": "FAQPage",
         "mainEntity": [
-          {"@type": "Question", "name": "What maritime training courses does MiRV Marine offer in Kolkata?", "acceptedAnswer": {"@type": "Answer", "text": "MiRV Marine LLP offers 30+ IMO-approved maritime training courses including OIL/CHEM/LNG LCHS, BRM, ERM, AHTS, JRM, and SIRE 2.0 familiarization. Courses are conducted online with cloud-based simulator access and are ABS certified."}},
+          {"@type": "Question", "name": "What maritime training courses does MiRV Marine offer?", "acceptedAnswer": {"@type": "Answer", "text": "MiRV Marine LLP offers 30+ IMO-approved maritime training courses including OIL/CHEM/LNG LCHS, BRM, ERM, AHTS, JRM, and SIRE 2.0 familiarization. Courses are conducted online with cloud-based simulator access and are ABS certified."}},
           {"@type": "Question", "name": "Does MiRV Marine provide vessel inspection and audit services?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. MiRV Marine has completed over 200 vessel audits including ISM, ISPS, MLC Dynamic Audits, VDR Analysis, Remote Navigation Audits, and Pre-Purchase/Pre-Vetting Inspections."}},
           {"@type": "Question", "name": "Where is MiRV Marine located and does it operate internationally?", "acceptedAnswer": {"@type": "Answer", "text": "MiRV Marine LLP is registered in Kolkata, West Bengal, India. The company also operates internationally as MiRV Marine Services LLC in the UAE, catering to the Main Fleet and Oil & Gas industry worldwide."}},
           {"@type": "Question", "name": "Is MiRV Marine certified and accredited?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. MiRV Marine LLP holds ISO certification from ABS Class and is an ABS certified training provider. The company was founded in 2019 and registered as an LLP in April 2024."}},
@@ -91,18 +91,18 @@
 
   <style>
     :root {
-      --ink: #080808;
-      --charcoal: #0d0d0d;
-      --surface: #121212;
-      --surface-raised: #191919;
-      --paper: #f4f1ea;
-      --muted: #a8a8a8;
-      --gold: #d4af37;
-      --gold-light: #e2c15a;
-      --red: #8b1e1e;
-      --red-deep: #6e1515;
-      --gold-rule: rgba(212, 175, 55, .18);
-      --line: rgba(244, 241, 234, .12);
+      --ink: #100609;
+      --charcoal: #18090e;
+      --surface: #210d14;
+      --surface-raised: #2d121b;
+      --paper: #fffaf4;
+      --muted: #c8b8b8;
+      --gold: #d4a72c;
+      --gold-light: #f0ca61;
+      --red: #a3133d;
+      --red-deep: #690d28;
+      --gold-rule: rgba(212, 167, 44, .28);
+      --line: rgba(255, 250, 244, .16);
       --radius: 4px;
       --wrap: min(1200px, calc(100% - 48px));
     }
@@ -163,16 +163,18 @@
     .hero { position: relative; min-height: min(850px, 100svh); display: flex; align-items: flex-end; padding: 148px 0 86px; overflow: hidden; background: #0b0b0b; }
      .hero-media { position: absolute; inset: 0; overflow: hidden; background: #090909; }
      .hero-slides { position: absolute; inset: 0; }
-     .hero-slide { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; object-position: center; opacity: 0; filter: saturate(.6) contrast(1.06) brightness(.48); transform: scale(1.01); transition: opacity .75s ease; will-change: opacity, transform; }
+     .hero-slide { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; object-position: center; opacity: 0; filter: saturate(.58) contrast(1.06) brightness(.46); transform: scale(1.01); transition: opacity .75s ease; will-change: opacity, transform; }
      .hero-slide.is-mirrored { transform: scaleX(-1) scale(1.01); }
      .hero-slide.is-active { z-index: 1; opacity: 1; }
-     .hero-media::after { content: ""; position: absolute; z-index: 2; inset: 0; pointer-events: none; background: linear-gradient(90deg, rgba(0,0,0,.99) 0%, rgba(0,0,0,.94) 24%, rgba(0,0,0,.72) 47%, rgba(0,0,0,.34) 73%, rgba(0,0,0,.08) 100%), linear-gradient(180deg, rgba(0,0,0,.16) 0%, rgba(0,0,0,.42) 100%); }
-     .hero::before { content: ""; position: absolute; z-index: 1; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,.98) 0%, rgba(0,0,0,.86) 31%, rgba(0,0,0,.48) 59%, rgba(0,0,0,.08) 86%, transparent 100%), linear-gradient(180deg, rgba(0,0,0,.24) 0%, rgba(0,0,0,.42) 100%), linear-gradient(96deg, rgba(5,13,25,.99) 0%, rgba(8,14,25,.92) 34%, rgba(9,20,30,.58) 68%, rgba(8,8,8,.32) 100%), linear-gradient(180deg, rgba(9,42,63,.3) 0%, rgba(8,11,20,.08) 38%, rgba(8,8,8,.98) 100%); }
-     .hero::after { content: ""; position: absolute; z-index: 2; inset: 0; opacity: .5; pointer-events: none; background-image: linear-gradient(125deg, rgba(160,17,53,.36) 0%, transparent 34%, rgba(11,72,92,.3) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.45'/%3E%3C/svg%3E"); background-size: cover, auto; mix-blend-mode: soft-light; }
+     .hero-media::after { content: ""; position: absolute; z-index: 2; inset: 0; pointer-events: none; background: linear-gradient(90deg, rgba(8,2,5,.99) 0%, rgba(15,3,8,.94) 24%, rgba(28,7,15,.72) 47%, rgba(35,9,18,.34) 73%, rgba(35,9,18,.08) 100%), linear-gradient(180deg, rgba(8,2,5,.16) 0%, rgba(8,2,5,.52) 100%); }
+     .hero::before { content: ""; position: absolute; z-index: 1; inset: 0; background: linear-gradient(90deg, rgba(8,2,5,.98) 0%, rgba(15,3,8,.86) 31%, rgba(28,7,15,.48) 59%, rgba(35,9,18,.08) 86%, transparent 100%), linear-gradient(180deg, rgba(8,2,5,.24) 0%, rgba(8,2,5,.52) 100%), linear-gradient(110deg, rgba(71,7,27,.72) 0%, rgba(34,5,17,.62) 38%, rgba(19,4,11,.35) 72%, rgba(8,2,5,.32) 100%), linear-gradient(180deg, rgba(133,69,18,.18) 0%, rgba(19,4,11,.08) 38%, rgba(8,2,5,.98) 100%); }
+     .hero::after { content: ""; position: absolute; z-index: 2; inset: 0; opacity: .5; pointer-events: none; background-image: linear-gradient(125deg, rgba(163,19,61,.34) 0%, transparent 34%, rgba(212,167,44,.18) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.45'/%3E%3C/svg%3E"); background-size: cover, auto; mix-blend-mode: soft-light; }
     .hero-content { position: relative; z-index: 3; width: var(--wrap); margin: 0 auto; }
     .hero-content .eyebrow { color: var(--gold-light); }
-     .hero h1 { max-width: 920px; margin: 25px 0 0; color: var(--paper); font-size: clamp(3.15rem, 8.2vw, 7.4rem); line-height: .9; text-shadow: 0 3px 28px rgba(0,0,0,.5); }
-    .hero h1 span { color: var(--gold-light); font-style: italic; }
+      .hero h1 { max-width: 1200px; margin: 25px 0 0; color: var(--paper); font-size: clamp(2.8rem, 6.5vw, 5.8rem); line-height: .94; text-shadow: 0 3px 28px rgba(0,0,0,.5); }
+     .hero h1 .hero-line { display: inline-block; white-space: nowrap; }
+     .hero h1 .hero-accent { color: var(--gold-light); font-style: italic; }
+     .hero h1 small { color: var(--gold); font-family: "DM Sans", Arial, sans-serif; font-size: .23em; font-style: normal; font-weight: 600; letter-spacing: .08em; vertical-align: middle; white-space: nowrap; }
      .hero-subtitle { max-width: 610px; margin: 26px 0 0; color: rgba(244,241,234,.88); font-size: clamp(1.05rem, 1.8vw, 1.3rem); text-shadow: 0 2px 16px rgba(0,0,0,.62); }
     .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 33px; }
     .hero-meta { position: absolute; right: 24px; bottom: 37px; z-index: 3; display: flex; flex-direction: column; align-items: flex-end; gap: 8px; color: rgba(244,241,234,.7); font-size: .62rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
@@ -358,7 +360,7 @@
       .desktop-nav { display: none; }
       .menu-button { display: block; }
       .hero { min-height: 760px; padding-bottom: 92px; }
-       .hero::before { background: linear-gradient(90deg, rgba(0,0,0,.96) 0%, rgba(0,0,0,.74) 42%, rgba(0,0,0,.18) 100%), linear-gradient(180deg, rgba(0,0,0,.22) 0%, rgba(0,0,0,.46) 100%), linear-gradient(96deg, rgba(5,13,25,.98) 0%, rgba(8,14,25,.88) 45%, rgba(9,20,30,.42) 100%), linear-gradient(180deg, rgba(9,42,63,.24) 0%, rgba(8,8,8,.08) 38%, rgba(8,8,8,.98) 100%); }
+       .hero::before { background: linear-gradient(90deg, rgba(8,2,5,.96) 0%, rgba(15,3,8,.74) 42%, rgba(35,9,18,.18) 100%), linear-gradient(180deg, rgba(8,2,5,.22) 0%, rgba(8,2,5,.52) 100%), linear-gradient(105deg, rgba(71,7,27,.84) 0%, rgba(34,5,17,.7) 45%, rgba(35,9,18,.42) 100%), linear-gradient(180deg, rgba(133,69,18,.18) 0%, rgba(8,2,5,.08) 38%, rgba(8,2,5,.98) 100%); }
       .hero-meta, .hero-index { display: none; }
        .hero-arrow { width: 42px; height: 42px; }
        .hero-arrow.prev { left: 18px; }
@@ -384,7 +386,8 @@
       .brand-name { font-size: 1.02rem; }
       .brand-tagline { font-size: .42rem; }
       .hero { min-height: 690px; padding-top: 125px; }
-      .hero h1 { font-size: clamp(2.8rem, 14vw, 4.45rem); }
+       .hero h1 { font-size: clamp(2.15rem, 10vw, 3.25rem); }
+       .hero h1 .hero-line { white-space: normal; }
        .hero-arrow { top: 43%; }
        .hero-dot { width: 16px; }
        .hero-dot.is-active, .hero-dot:hover, .hero-dot:focus-visible { width: 28px; }
@@ -489,7 +492,7 @@
       <div class="hero-index" id="hero-index" aria-hidden="true">01 / 08</div>
       <div class="hero-content">
         <span class="eyebrow">Maritime consultancy · India &amp; UAE</span>
-        <h1 id="hero-title">MiRV MARiNE <span>LLP</span><br>MiRV MARiNE Services LLC</h1>
+          <h1 id="hero-title"><span class="hero-line">MiRV MARiNE <span class="hero-accent">LLP</span> <small>(India)</small></span><br><span class="hero-line">MiRV MARiNE Services <span class="hero-accent">LLC</span> <small>(UAE)</small></span></h1>
         <p class="hero-subtitle">Catering to Main Fleet and Oil &amp; Gas Industry. Excellence in Maritime Training, Surveys, and Consultancy Services worldwide.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#services">Explore services <span class="arrow" aria-hidden="true">→</span></a>
@@ -706,7 +709,7 @@
           <p>Everything you need to know about our maritime services and training.</p>
         </div>
         <div class="faq-list reveal reveal-right">
-          <details class="faq-item" open><summary>What maritime training courses does MiRV Marine offer in Kolkata?</summary><div class="faq-answer">MiRV Marine LLP offers 30+ IMO-approved maritime training courses including OIL/CHEM/LNG LCHS, BRM, ERM, AHTS, JRM, and SIRE 2.0 familiarization. Courses are conducted online with cloud-based simulator access and are ABS certified.</div></details>
+          <details class="faq-item" open><summary>What maritime training courses does MiRV Marine offer?</summary><div class="faq-answer">MiRV Marine LLP offers 30+ IMO-approved maritime training courses including OIL/CHEM/LNG LCHS, BRM, ERM, AHTS, JRM, and SIRE 2.0 familiarization. Courses are conducted online with cloud-based simulator access and are ABS certified.</div></details>
           <details class="faq-item"><summary>Does MiRV Marine provide vessel inspection and audit services?</summary><div class="faq-answer">Yes. MiRV Marine has completed over 200 vessel audits including ISM, ISPS, MLC Dynamic Audits, VDR Analysis, Remote Navigation Audits, and Pre-Purchase/Pre-Vetting Inspections.</div></details>
           <details class="faq-item"><summary>Where is MiRV Marine located and does it operate internationally?</summary><div class="faq-answer">MiRV Marine LLP is registered in Kolkata, West Bengal, India. The company also operates internationally as MiRV Marine Services LLC in the UAE, catering to the Main Fleet and Oil &amp; Gas industry worldwide.</div></details>
           <details class="faq-item"><summary>Is MiRV Marine certified and accredited?</summary><div class="faq-answer">Yes. MiRV Marine LLP holds ISO certification from ABS Class and is an ABS certified training provider. The company was founded in 2019 and registered as an LLP in April 2024.</div></details>
