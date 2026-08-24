@@ -422,6 +422,43 @@
       .team-card, .team-card:nth-child(3n) { grid-column: 1 / -1; min-height: auto; }
       .footer-grid { grid-template-columns: 1fr; gap: 38px; }
     }
+     /* Reference-inspired visual direction: clean white sections, navy hero, maroon and gold accents */
+     :root { --navy: #0d1528; --maroon: #a3133d; }
+     .site-header { background: rgba(255,250,244,.97); border-color: var(--line); box-shadow: 0 4px 18px rgba(43,23,32,.06); }
+     .brand-name, .site-header .nav-link { color: var(--maroon); }
+     .site-header .nav-link { color: var(--ink-text); }
+     .site-header.is-scrolled { background: rgba(255,250,244,.97); }
+     .hero { min-height: min(600px, 100svh); align-items: center; padding: 140px 0 96px; background: var(--navy); border-bottom: 7px solid transparent; border-image: linear-gradient(90deg, var(--maroon), var(--gold), var(--maroon)) 1; }
+     .hero-media { opacity: .16; background: var(--navy); }
+     .hero-media::after { background: linear-gradient(90deg, rgba(13,21,40,.9), rgba(13,21,40,.68), rgba(13,21,40,.9)); }
+     .hero::before { background: linear-gradient(180deg, rgba(13,21,40,.82), rgba(13,21,40,.94)); }
+     .hero::after { opacity: .12; background-image: linear-gradient(125deg, rgba(163,19,61,.55), transparent 42%, rgba(212,167,44,.4) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.45'/%3E%3C/svg%3E"); }
+     .hero-content { text-align: center; }
+     .hero-content .eyebrow { display: none; }
+     .hero h1 { max-width: 1020px; margin: 0 auto; font-size: clamp(2rem, 4vw, 3.9rem); line-height: 1.08; }
+     .hero h1 .hero-line { display: inline-block; }
+     .hero-subtitle { max-width: 760px; margin: 24px auto 0; color: rgba(255,250,244,.86); }
+     .hero-actions { justify-content: center; margin-top: 36px; }
+     .hero .btn-primary { background: var(--gold); border-color: var(--gold); color: var(--maroon); }
+     .hero .btn-primary:hover { background: #efc13d; border-color: #efc13d; color: var(--maroon); }
+     .hero .btn-outline { border-color: rgba(255,250,244,.58); color: var(--paper); }
+     .hero-meta, .hero-index { display: none; }
+     .about, .gallery-section, .faq { background: #fffdf9; }
+     .services, .courses, .team { background: var(--paper); }
+     .section-head h2, .gallery-header h2, .courses-sticky h2, .faq-copy h2, .team-intro h2 { color: var(--maroon); }
+     .about-story { color: rgba(43,23,32,.8); }
+     .about-mission article, .course, .team-card { background: #ffffff; }
+     .service h3, .course h3, .faq-item summary { color: var(--ink-text); }
+     .course { border-color: rgba(43,23,32,.14); }
+     .team-card h3 { color: var(--maroon); }
+     .associations { background: #fff; }
+     .association-head h2 { color: var(--maroon); }
+     .footer { background: var(--navy); }
+     @media (max-width: 580px) {
+       .hero { min-height: 650px; padding: 125px 0 82px; }
+       .hero h1 { font-size: clamp(2rem, 9vw, 3rem); }
+       .hero h1 .hero-line { display: block; }
+     }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
       *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
