@@ -212,11 +212,11 @@
       .section-number::before { content: ""; display: inline-block; width: 38px; height: 1px; margin: 0 13px 5px 0; background: var(--gold); }
 
       /* About */
-      .about-layout { display: grid; grid-template-columns: minmax(0, .88fr) minmax(0, 1.12fr); gap: clamp(55px, 9vw, 150px); align-items: center; }
-      .about-visual { position: relative; padding: 0 0 0 38px; }
+      .about-layout { display: grid; grid-template-columns: minmax(0, .88fr) minmax(0, 1.12fr); gap: clamp(55px, 9vw, 150px); align-items: start; }
+      .about-visual { position: relative; align-self: start; height: fit-content; padding: 0 0 0 38px; }
       .about-visual::before { content: ""; position: absolute; top: -30px; left: 0; width: 47%; height: 78%; border: 1px solid var(--line); border-right: 0; }
       .about-visual::after { content: ""; position: absolute; right: -14px; bottom: 17px; width: 72%; height: 2px; background: linear-gradient(90deg, var(--red), var(--gold)); }
-      .about-visual img { position: relative; width: 100%; aspect-ratio: 9 / 7; object-fit: contain; background: #f4f1e9; filter: saturate(.68) contrast(1.05); }
+      .about-visual img { position: relative; display: block; width: 100%; height: auto; aspect-ratio: auto; object-fit: contain; background: #f4f1e9; filter: saturate(.68) contrast(1.05); }
       .about-quote { position: relative; width: min(270px, 70%); margin: 0 0 0 auto; padding: 25px 25px 22px; border-top: 2px solid var(--gold); background: rgba(20,22,21,.94); }
       .about-quote p { color: var(--gold-light); font-family: var(--serif); font-size: 27px; font-style: italic; line-height: 1; }
       .about-copy .eyebrow { margin-bottom: 21px; }
@@ -473,7 +473,7 @@
         <span class="section-number">01</span>
         <div class="container about-layout">
           <div class="about-visual reveal">
-            <img src="/images/resize51.jpg" width="1800" height="1400" loading="lazy" alt="MiRV Marine brand and maritime operations" />
+            <img src="/images/resize51.jpg" width="1800" height="1400" loading="eager" alt="MiRV Marine brand and maritime operations" />
             <div class="about-quote"><p>“Providing Celestial Solutions”</p></div>
           </div>
           <div class="about-copy">
