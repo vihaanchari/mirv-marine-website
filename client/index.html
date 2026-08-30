@@ -270,6 +270,14 @@
       .gallery-controls button { width: 39px; height: 39px; border: 1px solid var(--line); background: transparent; color: var(--gold); cursor: pointer; transition: background .25s ease, color .25s ease; }
       .gallery-controls button:hover { background: var(--gold); color: var(--ink); }
 
+      /* Associated companies */
+      .associates-section { background: #fff; }
+      .associates-heading { display: flex; justify-content: space-between; align-items: end; gap: 45px; }
+      .associates-heading h2 { max-width: 650px; margin-top: 21px; }
+      .associates-heading p { max-width: 330px; color: var(--muted); font-size: 13px; line-height: 1.8; }
+      .associates-art { margin-top: 55px; padding: clamp(14px, 3vw, 34px); border-top: 4px solid var(--red); border-right: 1px solid var(--gold); border-bottom: 1px solid var(--gold); border-left: 1px solid var(--line); background: #fff; box-shadow: 18px 18px 0 rgba(139,30,30,.07); }
+      .associates-art img { width: 100%; height: auto; }
+
       /* Courses */
       .course-heading { display: grid; grid-template-columns: 1fr .8fr; gap: 60px; align-items: end; margin-bottom: 57px; }
       .course-heading h2 { margin-top: 21px; }
@@ -320,11 +328,6 @@
       .team-heading p { max-width: 350px; color: var(--muted); font-size: 13px; line-height: 1.8; }
       .team-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); }
       .team-member { position: relative; min-height: 215px; padding: 28px 31px; background: var(--panel); transition: background .25s ease; }
-      .team-member:first-child { background: var(--red); }
-      .team-member:first-child h3 { color: #fff; }
-      .team-member:first-child .team-role { color: var(--gold-light); }
-      .team-member:first-child p:last-child { color: rgba(255,255,255,.78); }
-      .team-member:first-child:hover { background: var(--red-bright); }
       .team-member:hover { background: var(--panel-light); }
       .team-member::before { content: ""; position: absolute; top: 0; left: 0; width: 28px; height: 1px; background: var(--red-bright); }
       .team-member h3 { color: var(--paper); font-size: 31px; }
@@ -389,6 +392,8 @@
         .principles, .course-grid, .team-grid, .footer-top { grid-template-columns: 1fr; }
         .services-heading, .team-heading, .cta-inner { display: grid; align-items: start; }
         .services-heading, .team-heading { margin-bottom: 42px; }
+        .associates-heading { display: grid; align-items: start; gap: 24px; }
+        .associates-art { margin-top: 38px; box-shadow: 9px 9px 0 rgba(139,30,30,.07); }
         .service-item { grid-template-columns: 41px 1fr 25px; gap: 9px; }
         .service-item p { grid-column: 2 / -1; }
         .service-details { grid-column: 2 / -1; }
@@ -571,12 +576,28 @@
         </div>
       </section>
 
-      <section class="section section-dark" aria-labelledby="work-title">
+      <section class="section associates-section" id="associates" aria-labelledby="associates-title">
         <span class="section-number">03</span>
+        <div class="container">
+          <div class="associates-heading">
+            <div>
+              <span class="eyebrow reveal">Our network</span>
+              <h2 id="associates-title" class="reveal delay-1">Companies we are <em>associated with.</em></h2>
+            </div>
+            <p class="reveal delay-2">We are proud to work alongside respected names across maritime training, shipping, offshore, and marine operations.</p>
+          </div>
+          <div class="associates-art reveal delay-3">
+            <img src="/images/companies.png" width="1024" height="480" loading="lazy" alt="Companies associated with MiRV Marine" />
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-dark" aria-labelledby="work-title">
+        <span class="section-number">04</span>
         <div class="container work-layout">
           <div class="work-copy">
             <span class="eyebrow reveal">A closer look</span>
-            <h2 id="work-title" class="reveal delay-1">Our Work in Action</h2>
+            <h2 id="work-title" class="reveal delay-1">Our Work in <em>Action</em></h2>
             <p class="reveal delay-2">From cloud-based simulator modules to vessel audits and technical operations, our work is grounded in the realities of life at sea.</p>
             <div class="work-meta reveal delay-3"><strong>15</strong> documented views<br />from our work</div>
           </div>
@@ -598,7 +619,7 @@
       </section>
 
       <section class="section section-soft" id="courses" aria-labelledby="courses-title">
-        <span class="section-number">04</span>
+        <span class="section-number">05</span>
         <div class="container">
           <div class="course-heading">
             <div>
@@ -658,7 +679,7 @@
       </section>
 
       <section class="section section-dark" id="faq" aria-labelledby="faq-title">
-        <span class="section-number">05</span>
+        <span class="section-number">06</span>
         <div class="container faq-layout">
           <div class="faq-copy">
             <span class="eyebrow reveal">Good to know</span>
@@ -691,12 +712,12 @@
       </section>
 
       <section class="section section-soft" id="team" aria-labelledby="team-title">
-        <span class="section-number">06</span>
+        <span class="section-number">07</span>
         <div class="container">
           <div class="team-heading">
             <div>
               <span class="eyebrow reveal">Leadership</span>
-              <h2 id="team-title" class="reveal delay-1">Our Team</h2>
+              <h2 id="team-title" class="reveal delay-1">Our <em>Team</em></h2>
             </div>
             <p class="reveal delay-2">A multidisciplinary team built around maritime experience, technical knowledge, and practical understanding.</p>
           </div>
