@@ -190,18 +190,18 @@
       .hero-grid { position: absolute; inset: 0; z-index: -1; opacity: .25; background-image: linear-gradient(rgba(212,175,55,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(212,175,55,.08) 1px, transparent 1px); background-size: 110px 110px; mask-image: linear-gradient(90deg, black, transparent 70%); }
       .hero-content { width: min(var(--max), calc(100% - 64px)); margin: 0 auto; padding-top: 80px; }
       .hero-copy { width: min(650px, 100%); }
-      .hero h1 { margin: 23px 0 26px; color: #fff; font-size: clamp(58px, 8vw, 118px); letter-spacing: -.055em; }
-      .hero h1 em { display: block; color: var(--gold-light); font-style: normal; }
+      .hero h1 { margin: 23px 0 26px; color: #fff; font-size: clamp(46px, 6vw, 88px); letter-spacing: -.055em; }
+      .hero h1 > span, .hero h1 > em { display: block; white-space: nowrap; }
+      .hero h1 em { color: var(--gold-light); font-style: normal; }
       .hero-lead { max-width: 520px; color: rgba(244,241,234,.75); font-size: 15px; line-height: 1.8; }
       .hero-actions { display: flex; flex-wrap: wrap; gap: 13px; margin-top: 38px; }
       .button-outline { display: inline-flex; align-items: center; gap: 13px; min-height: 52px; padding: 0 23px; border: 1px solid rgba(244,241,234,.32); color: var(--paper); font-size: 10px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; transition: border-color .25s ease, background .25s ease; }
+      .hero .button-outline { color: #fff; border-color: rgba(244,241,234,.48); }
       .button-outline:hover { border-color: var(--gold); background: rgba(212,175,55,.1); }
       .arrow { font-size: 17px; line-height: 0; transition: transform .25s ease; }
       a:hover .arrow, button:hover .arrow { transform: translateX(4px); }
       .hero-index { position: absolute; right: max(32px, calc((100vw - var(--max)) / 2)); bottom: 68px; display: flex; align-items: center; gap: 16px; color: rgba(255,255,255,.7); font-size: 9px; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; }
       .hero-index::before { content: ""; width: 72px; height: 1px; background: var(--gold); }
-      .hero-scroll { position: absolute; left: max(32px, calc((100vw - var(--max)) / 2)); bottom: 42px; display: flex; align-items: center; gap: 13px; color: rgba(255,255,255,.7); font-size: 9px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; writing-mode: vertical-rl; transform: rotate(180deg); }
-      .hero-scroll::after { content: ""; width: 1px; height: 56px; background: linear-gradient(var(--gold), transparent); }
       .hero-rule { position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--red) 0 30%, var(--gold) 50%, var(--red) 70% 100%); }
 
       /* Editorial shared */
@@ -216,7 +216,7 @@
       .about-visual { position: relative; padding: 0 0 50px 38px; }
       .about-visual::before { content: ""; position: absolute; top: -30px; left: 0; width: 47%; height: 78%; border: 1px solid var(--line); border-right: 0; }
       .about-visual::after { content: ""; position: absolute; right: -14px; bottom: 17px; width: 72%; height: 2px; background: linear-gradient(90deg, var(--red), var(--gold)); }
-      .about-visual img { position: relative; width: 100%; aspect-ratio: .95; object-fit: cover; filter: saturate(.68) contrast(1.05); }
+      .about-visual img { position: relative; width: 100%; aspect-ratio: 9 / 7; object-fit: contain; background: #f4f1e9; filter: saturate(.68) contrast(1.05); }
       .about-quote { position: absolute; right: 0; bottom: 0; width: min(270px, 70%); padding: 25px 25px 22px; border-top: 2px solid var(--gold); background: rgba(20,22,21,.94); }
       .about-quote p { color: var(--gold-light); font-family: var(--serif); font-size: 27px; font-style: italic; line-height: 1; }
       .about-copy .eyebrow { margin-bottom: 21px; }
@@ -227,6 +227,11 @@
       .principle:first-child { background: var(--red); }
       .principle:first-child h3 { color: #fff; }
       .principle:first-child p { color: rgba(255,255,255,.78); }
+      .principle-head { display: flex; align-items: center; gap: 13px; margin-bottom: 16px; }
+      .principle-head h3 { margin-bottom: 0; }
+      .principle-icon { width: 31px; height: 31px; flex: 0 0 auto; color: var(--red); fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+      .principle:first-child .principle-icon { color: var(--gold-light); }
+      .principle-icon circle, .principle-icon path, .principle-icon line, .principle-icon polyline { vector-effect: non-scaling-stroke; }
       .principle h3 { margin-bottom: 10px; color: var(--gold-light); font-size: 25px; }
       .principle p { color: var(--muted); font-size: 12px; line-height: 1.7; }
 
@@ -315,8 +320,11 @@
       .team-heading p { max-width: 350px; color: var(--muted); font-size: 13px; line-height: 1.8; }
       .team-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); }
       .team-member { position: relative; min-height: 215px; padding: 28px 31px; background: var(--panel); transition: background .25s ease; }
-      .team-member:nth-child(3), .team-member:nth-child(6) { background: #fff7f2; }
-      .team-member:nth-child(3), .team-member:nth-child(6) { border-left: 4px solid var(--red); }
+      .team-member:first-child { background: var(--red); }
+      .team-member:first-child h3 { color: #fff; }
+      .team-member:first-child .team-role { color: var(--gold-light); }
+      .team-member:first-child p:last-child { color: rgba(255,255,255,.78); }
+      .team-member:first-child:hover { background: var(--red-bright); }
       .team-member:hover { background: var(--panel-light); }
       .team-member::before { content: ""; position: absolute; top: 0; left: 0; width: 28px; height: 1px; background: var(--red-bright); }
       .team-member h3 { color: var(--paper); font-size: 31px; }
@@ -357,7 +365,6 @@
         .footer-top { grid-template-columns: 1fr 1fr; }
         .footer-brand { grid-column: 1 / -1; }
         .hero-index { right: 21px; }
-        .hero-scroll { left: 21px; }
       }
       @media (max-width: 620px) {
         .container, .hero-content { width: calc(100% - 36px); }
@@ -367,7 +374,8 @@
         .brand-tag { font-size: 7px; }
         .hero { min-height: 760px; align-items: end; padding-bottom: 100px; }
         .hero::after { background: linear-gradient(90deg, rgba(8,9,9,.87), rgba(8,9,9,.35)), linear-gradient(0deg, rgba(8,9,9,.97), transparent 60%); }
-        .hero h1 { font-size: clamp(55px, 17vw, 83px); }
+        .hero h1 { font-size: clamp(42px, 12vw, 70px); }
+        .hero h1 > span, .hero h1 > em { white-space: normal; }
         .hero-lead { font-size: 13px; }
         .hero-actions { display: grid; }
         .hero-actions a { width: 100%; }
@@ -414,7 +422,7 @@
         <nav class="nav-links" aria-label="Primary navigation">
           <a href="#about">About</a>
           <a href="#services">Services</a>
-          <a href="#courses">Academy</a>
+          <a href="#courses">Courses</a>
           <a href="#team">Team</a>
           <a href="#contact">Contact</a>
         </nav>
@@ -426,7 +434,7 @@
       <nav class="mobile-panel" id="mobile-panel" aria-label="Mobile navigation">
         <a href="#about">About</a>
         <a href="#services">Services</a>
-        <a href="#courses">Academy</a>
+        <a href="#courses">Courses</a>
         <a href="#team">Team</a>
         <a href="#contact">Contact</a>
         <a class="nav-cta" href="#contact">Get in touch <span class="arrow">↗</span></a>
@@ -444,15 +452,14 @@
         <div class="hero-content">
           <div class="hero-copy">
             <span class="eyebrow reveal">Maritime expertise · India / UAE</span>
-            <h1 id="hero-title" class="reveal delay-1">Built for the <em>open water.</em></h1>
-            <p class="hero-lead reveal delay-2">MiRV MARiNE LLP and MiRV MARiNE Services LLC deliver maritime training, surveys, and consultancy services for the Main Fleet and Oil &amp; Gas industry worldwide.</p>
+            <h1 id="hero-title" class="reveal delay-1"><span>MiRV MARiNE LLP [India]</span><em>MiRV MARiNE Services LLC [UAE]</em></h1>
+            <p class="hero-lead reveal delay-2">MiRV MARiNE delivers maritime training, surveys, and consultancy services for the Main Fleet and Oil &amp; Gas industry worldwide.</p>
             <div class="hero-actions reveal delay-3">
               <a class="button-red" href="#services">Explore services <span class="arrow">↗</span></a>
               <a class="button-outline" href="#about">Our story <span class="arrow">→</span></a>
             </div>
           </div>
         </div>
-        <div class="hero-scroll">Scroll to explore</div>
         <div class="hero-index">01 / 06 &nbsp; MiRV Marine</div>
         <div class="hero-rule" aria-hidden="true"></div>
       </section>
@@ -466,7 +473,7 @@
           </div>
           <div class="about-copy">
             <span class="eyebrow reveal">The company</span>
-            <h2 id="about-title" class="reveal delay-1">Experience with a clear horizon.</h2>
+            <h2 id="about-title" class="reveal delay-1"><em>About The Company</em></h2>
             <div class="about-story reveal delay-2">
               <p>MiRV MARiNE was started as a proprietorship company by Capt. Indraneel Chari in 2019.</p>
               <p>A marine consultancy firm which grew exponentially in the field of Maritime training, Inspections/surveys, software development, coaching/mentoring, cyber security, crewing, store supplies and export services over a short period of time.</p>
@@ -476,11 +483,28 @@
             </div>
             <div class="principles reveal delay-3">
               <article class="principle">
-                <h3>Our mission</h3>
+                <div class="principle-head">
+                  <svg class="principle-icon" viewBox="0 0 32 32" aria-hidden="true">
+                    <circle cx="16" cy="16" r="11"></circle>
+                    <circle cx="16" cy="16" r="3"></circle>
+                    <line x1="16" y1="2.5" x2="16" y2="8"></line>
+                    <line x1="16" y1="24" x2="16" y2="29.5"></line>
+                    <line x1="2.5" y1="16" x2="8" y2="16"></line>
+                    <line x1="24" y1="16" x2="29.5" y2="16"></line>
+                  </svg>
+                  <h3>Our mission</h3>
+                </div>
                 <p>To provide maritime training and associated services, keeping in pace with the fast-changing world of shipping, to deliver competent and proficient seafarers who shall excel in the shipping industry.</p>
               </article>
               <article class="principle">
-                <h3>Our vision</h3>
+                <div class="principle-head">
+                  <svg class="principle-icon" viewBox="0 0 32 32" aria-hidden="true">
+                    <path d="M3 16s4.7-8 13-8 13 8 13 8-4.7 8-13 8S3 16 3 16Z"></path>
+                    <circle cx="16" cy="16" r="3.5"></circle>
+                    <path d="M16 4.5v3M27.5 16h-3M16 27.5v-3M4.5 16h3"></path>
+                  </svg>
+                  <h3>Our vision</h3>
+                </div>
                 <p>Our vision is to be recognized as a global supplier of the highest quality of maritime services and training to the shipping industry.</p>
               </article>
             </div>
@@ -552,7 +576,7 @@
         <div class="container work-layout">
           <div class="work-copy">
             <span class="eyebrow reveal">A closer look</span>
-            <h2 id="work-title" class="reveal delay-1">The work is in the detail.</h2>
+            <h2 id="work-title" class="reveal delay-1">Our Work in Action</h2>
             <p class="reveal delay-2">From cloud-based simulator modules to vessel audits and technical operations, our work is grounded in the realities of life at sea.</p>
             <div class="work-meta reveal delay-3"><strong>15</strong> documented views<br />from our work</div>
           </div>
@@ -672,7 +696,7 @@
           <div class="team-heading">
             <div>
               <span class="eyebrow reveal">Leadership</span>
-              <h2 id="team-title" class="reveal delay-1">People who know<br /><em>the waters.</em></h2>
+              <h2 id="team-title" class="reveal delay-1">Our Team</h2>
             </div>
             <p class="reveal delay-2">A multidisciplinary team built around maritime experience, technical knowledge, and practical understanding.</p>
           </div>
