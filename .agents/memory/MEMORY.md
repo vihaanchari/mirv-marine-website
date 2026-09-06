@@ -1,0 +1,1 @@
+- [GitHub publishing access](github-publishing-access.md) — connector reads work, but automated writes are blocked; use Replit Version Control authorization.
